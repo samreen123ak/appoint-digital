@@ -42,7 +42,7 @@ import { Diamond } from "lucide-react";
 
 export default function Industries() {
   return (
-    <section className="relative min-h-screen bg-bg via-slate-800 to-amber-900 flex items-center justify-center p-8">
+    <section className="relative min-h-screen bg-bg  flex items-center justify-center p-8">
       {/* Background overlay for depth */}
       <div className="absolute inset-0 bg-black/20" />
 
@@ -121,7 +121,7 @@ export default function Industries() {
           {/* Middle section with left column, center cube, right column */}
           {/* Left Column */}
           <div className="col-span-3 flex flex-col gap-4">
-            {Array(8)
+            {Array(3)
               .fill("Electrician Digital Marketing")
               .map((text, index) => (
                 <div
@@ -149,7 +149,7 @@ export default function Industries() {
                   src="/images/dice.svg"
                   alt="Cube"
                   width={220}
-                  height={120}
+                  height={220}
                   className="drop-shadow-[0_0_25px_rgba(255,200,0,0.5)]"
                 />
               </div>
@@ -160,7 +160,7 @@ export default function Industries() {
 
           {/* Right Column */}
           <div className="col-span-3 flex flex-col gap-4">
-            {Array(8)
+            {Array(3)
               .fill("Electrician Digital Marketing")
               .map((text, index) => (
                 <div
@@ -168,10 +168,10 @@ export default function Industries() {
                   className="group relative w-40 h-12 bg-black/40 "
                 >
                   <div className="flex items-center justify-start h-full">
+                    <FaDiamond className="w-4 h-4 text-primary" />
                     <span className="text-white text-xs font-medium leading-tight mr-2">
                       {text}
                     </span>
-                    <FaDiamond className="w-4 h-4 text-primary" />
                   </div>
                 </div>
               ))}
