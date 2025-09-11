@@ -18,14 +18,14 @@ export default function BrandSection() {
       {/* Overlay */}
       <div className="absolute inset-0 "></div>
 
-      <div className="relative z-10 px-6 py-16">
+      <div className="relative z-10 px-20 py-16 max-w-full  ">
         {/* Title + Subtitle */}
         <div className="mb-10">
-          <h2 className="text-4xl font-extrabold">
+          <h2 className="text-5xl font-extrabold mb-5">
             <span className="text-white">The best brands choose</span>{" "}
             <span className="text-black">Appoint Digital</span>
           </h2>
-          <p className="text-xs font-bold text-black mt-3 max-w-lg">
+          <p className="text-lg font-bold text-black mt-3 max-w-3xl mb-15">
             As a trusted Digital Marketing Agency Company, Bird has been
             featured in top-tier media and industry-leading platforms,
             showcasing our expertise in delivering exceptional digital marketing
@@ -34,7 +34,7 @@ export default function BrandSection() {
         </div>
 
         {/* Brand Logos Row */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 max-w-full mx-auto">
           <div className="flex items-center justify-center bg-black h-24 rounded-full">
             <Image
               src="/images/brand1.svg"
