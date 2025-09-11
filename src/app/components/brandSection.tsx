@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function BrandSection() {
   return (
-    <section className="relative w-full h-screen">
+    <section className="relative w-full h-screen bg-bg">
       <div className="absolute inset-0">
         <Image
           src="/images/brandbg.svg"
@@ -18,9 +18,9 @@ export default function BrandSection() {
       {/* Overlay */}
       <div className="absolute inset-0 "></div>
 
-      <div className="relative z-10 px-20 py-16 max-w-full  ">
+      <div className="relative z-10 px-20 py-16 container mx-auto ">
         {/* Title + Subtitle */}
-        <div className="mb-10">
+        <div className="mb-16">
           <h2 className="text-5xl font-extrabold mb-5">
             <span className="text-white">The best brands choose</span>{" "}
             <span className="text-black">Appoint Digital</span>
@@ -34,7 +34,7 @@ export default function BrandSection() {
         </div>
 
         {/* Brand Logos Row */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 max-w-full mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 max-w-full mx-auto my-20">
           <div className="flex items-center justify-center bg-black h-24 rounded-full">
             <Image
               src="/images/brand1.svg"
@@ -79,6 +79,16 @@ export default function BrandSection() {
               height={60}
             />
           </div>
+        </div>
+      </div>
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 z-20">
+        <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-[500px] md:h-[500px] lg:w-[700px] lg:h-[700px]">
+          <Image
+            src="/images/globeb.svg"
+            alt="Global Reach"
+            fill
+            className="object-contain drop-shadow-2xl"
+          />
         </div>
       </div>
     </section>
