@@ -89,7 +89,7 @@ export default function ServicesSection() {
       />
 
       {/* Content (Top Layer) */}
-      <div className="relative z-20 mt-10">
+      <div className="relative z-20 mt-30">
         {/* Heading */}
         <div className="mb-16">
           <h3 className="text-sm uppercase tracking-widest text-primary font-bold">

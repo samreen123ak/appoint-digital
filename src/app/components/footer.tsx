@@ -5,7 +5,7 @@ import { FaInstagram, FaLinkedin, FaBehance } from "react-icons/fa";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-black text-white px-6 md:px-16 py-10">
+    <footer className="bg-black text-white px-6 md:px-16 pt-10">
       <div className="grid md:grid-cols-3 gap-8 items-center">
         {/* Contact */}
         <div>
@@ -32,9 +32,9 @@ const Footer: React.FC = () => {
               height={400}
               className="object-cover"
             />
-            <span className="absolute text-xs text-gray-300 text-end px-2">
+            {/* <span className="absolute text-xs text-gray-300 text-end px-2">
               Terms & Conditions
-            </span>
+            </span> */}
           </div>
         </div>
 
@@ -51,13 +51,13 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Footer bottom */}
-      <div className="mt-8 flex flex-col md:flex-row items-center justify-between border-t border-white/10 pt-4">
+      {/* <div className="mt-8 flex flex-col md:flex-row items-center justify-between border-t border-white/10 pt-4">
         <p className="text-sm text-gray-400">
           © Copyright 2024. Aditama Studio. All rights reserved.
-        </p>
+        </p> */}
 
-        {/* Social Icons */}
-        <div className="flex gap-4 mt-3 md:mt-0">
+      {/* Social Icons */}
+      {/* <div className="flex gap-4 mt-3 md:mt-0">
           <a href="#" className="hover:text-primary">
             <FaBehance size={18} />
           </a>
@@ -68,7 +68,14 @@ const Footer: React.FC = () => {
             <FaLinkedin size={18} />
           </a>
         </div>
-      </div>
+      </div> */}
+      <Image
+        src="/images/footertext.svg"
+        alt="Globe"
+        width={1200}
+        height={1000}
+        className="object-cover"
+      />
     </footer>
   );
 };

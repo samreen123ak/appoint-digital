@@ -6,7 +6,7 @@ export default function StartProject() {
     <section className="bg-white py-5">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 px-6">
         {/* LEFT SIDE */}
-        <div className="pl-12 py-15">
+        <div className="pl-15 py-20">
           {/* Title */}
           <h2 className="text-[42px] font-bold text-primary mb-6 leading-tight">
             Start a project

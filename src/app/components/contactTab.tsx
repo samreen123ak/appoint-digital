@@ -37,7 +37,7 @@ export default function ContactTabs() {
           <div className="inline-flex rounded-lg overflow-hidden bg-black p-1">
             <button
               onClick={() => setActive("contact")}
-              className={`px-8 py-4 font-semibold rounded-md transition-all duration-200 ${
+              className={`px-8 py-3 font-semibold rounded-md transition-all duration-200 ${
                 active === "contact"
                   ? "bg-black text-white"
                   : "bg-primary text-black "
@@ -47,7 +47,7 @@ export default function ContactTabs() {
             </button>
             <button
               onClick={() => setActive("call")}
-              className={`px-8 py-4 font-semibold rounded-md transition-all duration-200 ${
+              className={`px-8 py-3 font-semibold rounded-md transition-all duration-200 ${
                 active === "call"
                   ? "bg-black text-white"
                   : "bg-primary text-black "
