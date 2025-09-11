@@ -11,8 +11,9 @@ export default function ContactTabs() {
         <Image
           src="/images/contactbg.svg"
           alt="Brand Background"
-          fill
-          className="object-contain w-full h-full"
+          width={1920}
+          height={1080}
+          className="w-full h-auto"
           priority
         />
       </div>
