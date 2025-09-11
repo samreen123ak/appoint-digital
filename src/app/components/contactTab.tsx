@@ -1,12 +1,12 @@
 "use client";
-import React, { useState } from "react";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function ContactTabs() {
   const [active, setActive] = useState("contact");
 
   return (
-    <section className="relative w-full h-screen bg-bg">
+    <section className="relative w-full h-screen overflow-hidden bg-bg">
       <div className="absolute inset-0">
         <Image
           src="/images/contactbg.svg"
@@ -18,43 +18,39 @@ export default function ContactTabs() {
         />
       </div>
 
-      {/* Overlay */}
-      <div className="absolute inset-0 "></div>
-
-      <div className="relative z-10 px-6 py-16">
-        <div className="container mx-auto text-center px-6">
-          {/* Title */}
-          <h2 className="text-3xl font-bold mb-4">
+      <div className="relative z-10 flex items-center justify-center h-full px-6">
+        <div className="text-center max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-8 leading-tight">
             Take Your Digital Success
-            <br /> to the Next Level
-            <br /> with Us!
-          </h2>
-          <p className="text-lg mb-8 max-w-2xl mx-auto">
+            <br />
+            to the Next Level
+            <br />
+            with Us!
+          </h1>
+
+          <p className="text-lg md:text-xl text-black mb-12 max-w-3xl mx-auto leading-relaxed">
             Partner with our web agency to turn data into growth, insights into
-            <br />
             impact, and strategies into success. Lets make every digital move
-            <br />
             count
           </p>
 
-          {/* Tab Bar */}
-          <div className="inline-flex rounded-lg overflow-hidden border border-black bg-black p-1">
+          <div className="inline-flex rounded-lg overflow-hidden bg-black p-1">
             <button
               onClick={() => setActive("contact")}
-              className={`px-6 py-3 font-semibold rounded-md transition ${
+              className={`px-8 py-4 font-semibold rounded-md transition-all duration-200 ${
                 active === "contact"
-                  ? "bg-primary text-black"
-                  : "bg-black text-white"
+                  ? "bg-black text-white"
+                  : "bg-yellow-400 text-black hover:bg-yellow-300"
               }`}
             >
               Contact Us
             </button>
             <button
               onClick={() => setActive("call")}
-              className={`px-6 py-3 font-semibold rounded-md transition ${
+              className={`px-8 py-4 font-semibold rounded-md transition-all duration-200 ${
                 active === "call"
-                  ? "bg-primary text-black"
-                  : "bg-black text-white"
+                  ? "bg-black text-white"
+                  : "bg-yellow-400 text-black hover:bg-yellow-300"
               }`}
             >
               Call Now
