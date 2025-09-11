@@ -17,7 +17,7 @@ export default function ThriveSection() {
           {/* Right - Paragraph */}
           <div>
             <h3 className="font-semibold text-lg text-white">
-              Clients’ Trusted Marketing Partner
+              Clients Trusted Marketing Partner
             </h3>
             <p className="text-gray-300 text-xs mt-3 mb-4 max-w-80 ">
               With Appoint Digital, we bring expertise, transparency, and

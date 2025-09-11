@@ -1,7 +1,7 @@
 export default function AppointSection() {
   return (
     <section className="bg-bg py-16 ">
-      <h2 className="text-4xl  font-extrabold leading-snug text-white text-center">
+      <h2 className="text-5xl  font-extrabold leading-snug text-white text-center">
         Best brands choose <br />
         <span className="text-primary"> Appoint Digital</span>
       </h2>

@@ -63,46 +63,67 @@ export default function ServicesSection() {
 
   return (
     <section className="relative bg-black py-20 px-6 text-center text-white overflow-hidden">
-      {/* Background image */}
+      {/* Left & Right Decorative Images (Bottom Layer) */}
+      <Image
+        src="/images/apponitbgleft.svg"
+        alt="Left Decoration"
+        width={250}
+        height={250}
+        className="absolute left-0 top-[70%] -translate-y-1/2 z-0 pointer-events-none"
+      />
+      <Image
+        src="/images/appointbgright.svg"
+        alt="Right Decoration"
+        width={250}
+        height={250}
+        className="absolute right-0 top-1/4 -translate-y-1/2 z-0 pointer-events-none"
+      />
+
+      {/* Globe Background (Middle Layer) */}
       <Image
         src="/images/globebg.svg"
         alt="Background"
         fill
-        className="object-cover object-center "
+        priority
+        className="object-cover z-10"
       />
 
-      {/* Heading */}
-      <div className="relative z-10 mb-16">
-        <h3 className="text-sm uppercase tracking-widest text-primary font-bold">
-          Leading digital marketing Firm.
-        </h3>
-        <h2 className="text-4xl md:text-5xl font-extrabold">
-          <span className="text-primary">Appoint</span>{" "}
-          <span className="text-white">Digital Solutions</span>
-        </h2>
-      </div>
-      {/* Services Grid */}
-      <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className="bg-gray-500/20 border border-yellow-500/40 rounded-3xl p-8 flex flex-col items-center text-center hover:bg-yellow-500/10 transition h-72 w-52"
-          >
-            <div className="mb-4">
-              <Image
-                src={service.icon}
-                alt={service.title}
-                width={50}
-                height={50}
-                className="mx-auto"
-              />
+      {/* Content (Top Layer) */}
+      <div className="relative z-20 mt-10">
+        {/* Heading */}
+        <div className="mb-16">
+          <h3 className="text-sm uppercase tracking-widest text-primary font-bold">
+            Leading digital marketing Firm.
+          </h3>
+          <h2 className="text-4xl md:text-5xl font-extrabold">
+            <span className="text-primary">Appoint</span>{" "}
+            <span className="text-white">Digital Solutions</span>
+          </h2>
+        </div>
+
+        {/* Services Grid */}
+        <div className="flex flex-wrap justify-center gap-6 max-w-5xl mx-auto">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="bg-gray-500/20 border border-yellow-500/40 rounded-3xl p-8 flex flex-col items-center text-center hover:bg-yellow-500/10 transition h-72 w-52"
+            >
+              <div className="mb-4">
+                <Image
+                  src={service.icon}
+                  alt={service.title}
+                  width={50}
+                  height={50}
+                  className="mx-auto"
+                />
+              </div>
+              <h3 className="text-primary font-semibold text-lg mb-2">
+                {service.title}
+              </h3>
+              <p className="text-gray-300 text-xs">{service.desc}</p>
             </div>
-            <h3 className="text-primary font-semibold text-lg mb-2">
-              {service.title}
-            </h3>
-            <p className="text-gray-300 text-xs">{service.desc}</p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

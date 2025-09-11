@@ -44,9 +44,9 @@ export default function Industries() {
   return (
     <section className="relative min-h-screen bg-bg  flex items-center justify-center p-8">
       {/* Background overlay for depth */}
-      <div className="absolute inset-0 bg-black/20" />
+      <div className="absolute inset-0 " />
 
-      <div className="relative z-10 max-w-7xl mx-auto text-center">
+      <div className="relative z-10 w-f mx-auto text-center">
         {/* Header */}
         <div className="mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -59,7 +59,7 @@ export default function Industries() {
           </p>
         </div>
 
-        <div className="relative grid grid-cols-12 gap-4 items-center justify-items-center max-w-5xl mx-auto">
+        <div className="relative grid grid-cols-12 gap-4 items-center justify-items-center w-full ">
           {/* Top 3 rows - spanning full width */}
           <div className="col-span-12 grid grid-cols-4 gap-4 mb-4">
             {Array(4)
