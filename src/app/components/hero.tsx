@@ -11,7 +11,7 @@ export default function Hero() {
       </header>
 
       {/* Hero Content */}
-      <div className="flex  flex-col items-center justify-center text-center  mt-10">
+      <div className="flex  flex-col items-center justify-center text-center w-full  mt-10">
         <p className="text-2xl mb-2">Win at Your Marketing with</p>
         <h1 className="text-6xl font-extrabold text-primary">
           Appoint Digital Solutions

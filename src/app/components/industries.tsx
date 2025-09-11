@@ -1,77 +1,57 @@
-// app/industries/page.tsx
 import React from "react";
 import Image from "next/image";
 import { FaDiamond } from "react-icons/fa6";
 
-const industries = [
-  "Electrician Digital Marketing",
-  "Plumber Digital Marketing",
-  "Real Estate Digital Marketing",
-  "Healthcare Digital Marketing",
-  "E-commerce Digital Marketing",
-  "Education Digital Marketing",
-  "Law Firm Digital Marketing",
-  "Restaurant Digital Marketing",
-  "Construction Digital Marketing",
-  "Travel & Tourism Digital Marketing",
-  "Fitness & Gym Digital Marketing",
-  "Finance Digital Marketing",
-  "IT Services Digital Marketing",
-  "Automotive Digital Marketing",
-  "Beauty & Salon Digital Marketing",
-  "Entertainment Digital Marketing",
-  "Hospitality Digital Marketing",
-  "NGO Digital Marketing",
-  "Retail Digital Marketing",
-  "Startup Digital Marketing",
-  "Startup Digital Marketing",
-  "Startup Digital Marketing",
-  "Startup Digital Marketing",
-  "Startup Digital Marketing",
-  "Startup Digital Marketing",
-  "Startup Digital Marketing",
-  "Startup Digital Marketing",
-  "Startup Digital Marketing",
-  "Startup Digital Marketing",
-  "Startup Digital Marketing",
-  "Startup Digital Marketing",
-  "Startup Digital Marketing",
-  "Startup Digital Marketing",
-];
-import { Diamond } from "lucide-react";
-
 export default function Industries() {
   return (
-    <section className="relative min-h-screen bg-bg  flex items-center justify-center p-8">
-      {/* Background overlay for depth */}
-      <div className="absolute inset-0 " />
+    <section className="relative min-h-screen bg-bg flex items-center justify-center py-20 overflow-hidden">
+      {/* Background overlay */}
+      <div className="absolute inset-0" />
 
-      <div className="relative z-10 w-f mx-auto text-center">
+      {/* Top-left background image */}
+      <Image
+        src="/images/industrybgleft.svg"
+        alt="Decoration Left"
+        width={300}
+        height={300}
+        className="absolute top-[15%] left-0 opacity-60 pointer-events-none select-none"
+      />
+
+      {/* Top-right background image */}
+      <Image
+        src="/images/industrybgright.svg"
+        alt="Decoration Right"
+        width={300}
+        height={300}
+        className="absolute top-[15%] right-0 opacity-60 pointer-events-none select-none"
+      />
+
+      <div className="relative z-10 mx-auto text-center">
         {/* Header */}
-        <div className="mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        <div className="mb-20">
+          <h2 className="text-5xl font-bold text-white mb-8">
             Industries We Work With
           </h2>
-          <p className="text-gray-300 max-w-2xl mx-auto text-lg leading-relaxed">
+          <p className="text-gray-300 max-w-3xl mx-auto text-xl leading-relaxed">
             At Blitz, we extend our Digital Marketing Agency expertise across a
             diverse range of industries, tailoring strategies to meet the unique
             demands and opportunities each sector presents.
           </p>
         </div>
 
-        <div className="relative grid grid-cols-12 gap-4 items-center justify-items-center w-full ">
-          {/* Top 3 rows - spanning full width */}
-          <div className="col-span-12 grid grid-cols-4 gap-4 mb-4">
+        <div className="relative grid grid-cols-12 gap-6 items-center justify-items-center w-full">
+          {/* Top 3 rows */}
+          <div className="col-span-12 grid grid-cols-4 gap-6 mb-6">
             {Array(4)
               .fill("Electrician Digital Marketing")
               .map((text, index) => (
                 <div
                   key={`top-3-${index}`}
-                  className="group relative w-40 h-12 bg-black/40 backdrop-blur-sm  p-2  "
+                  className="group relative w-64 h-16 text-left bg-black/40 backdrop-blur-sm p-3"
                 >
                   <div className="flex items-center justify-center h-full">
-                    <FaDiamond className="w-4 h-4 text-primary mr-2  flex-shrink-0" />
-                    <span className="text-white text-xs font-medium leading-tight">
+                    <FaDiamond className="w-6 h-6 text-primary mr-3 flex-shrink-0" />
+                    <span className="text-white text-base font-semibold leading-snug">
                       {text}
                     </span>
                   </div>
@@ -80,17 +60,17 @@ export default function Industries() {
               ))}
           </div>
 
-          <div className="col-span-12 grid grid-cols-4 gap-4 mb-4">
+          <div className="col-span-12 grid grid-cols-4 gap-6 mb-6">
             {Array(4)
               .fill("Electrician Digital Marketing")
               .map((text, index) => (
                 <div
                   key={`top-2-${index}`}
-                  className="group relative w-40 h-12 bg-black/40 backdrop-blur-sm "
+                  className="group relative w-64 h-16 text-left bg-black/40 backdrop-blur-sm p-3"
                 >
                   <div className="flex items-center justify-center h-full">
-                    <FaDiamond className="w-4 h-4 text-primary mr-2" />
-                    <span className="text-white text-xs font-medium leading-tight">
+                    <FaDiamond className="w-6 h-6 text-primary mr-3" />
+                    <span className="text-white text-base font-semibold leading-snug">
                       {text}
                     </span>
                   </div>
@@ -99,38 +79,37 @@ export default function Industries() {
               ))}
           </div>
 
-          <div className="col-span-12 grid grid-cols-4 gap-4 mb-8">
+          <div className="col-span-12 grid grid-cols-4 gap-6 mb-12">
             {Array(4)
               .fill("Electrician Digital Marketing")
               .map((text, index) => (
                 <div
                   key={`top-1-${index}`}
-                  className="group relative w-40 h-12 bg-black/40  "
+                  className="group relative w-64 h-16 text-left bg-black/40 p-3"
                 >
                   <div className="flex items-center justify-center h-full">
-                    <FaDiamond className="w-4 h-4 text-primary mr-2" />
-                    <span className="text-white text-xs font-medium leading-tight">
+                    <FaDiamond className="w-6 h-6 text-primary mr-3" />
+                    <span className="text-white text-base font-semibold leading-snug">
                       {text}
                     </span>
                   </div>
-                  <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-amber-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
               ))}
           </div>
 
-          {/* Middle section with left column, center cube, right column */}
+          {/* Middle section */}
           {/* Left Column */}
-          <div className="col-span-3 flex flex-col gap-4">
+          <div className="col-span-3 flex flex-col gap-6">
             {Array(3)
               .fill("Electrician Digital Marketing")
               .map((text, index) => (
                 <div
                   key={`left-${index}`}
-                  className="group relative w-40 h-12 bg-black/40 "
+                  className="group relative w-64 h-16 text-left bg-black/40 p-3"
                 >
                   <div className="flex items-center justify-start h-full">
-                    <FaDiamond className="w-4 h-4 text-primary mr-2 " />
-                    <span className="text-white text-xs font-medium leading-tight">
+                    <FaDiamond className="w-6 h-6 text-primary mr-3" />
+                    <span className="text-white text-base font-semibold leading-snug">
                       {text}
                     </span>
                   </div>
@@ -138,38 +117,33 @@ export default function Industries() {
               ))}
           </div>
 
-          {/* Central 3D Cube */}
+          {/* Center Cube */}
           <div className="col-span-6 flex justify-center">
             <div className="relative">
-              {/* Glow effect */}
-
-              {/* Cube container */}
-              <div className="relative w-32 h-32 md:w-40 md:h-40">
+              <div className="relative w-52 h-52 md:w-64 md:h-64">
                 <Image
                   src="/images/dice.svg"
                   alt="Cube"
-                  width={220}
-                  height={220}
-                  className="drop-shadow-[0_0_25px_rgba(255,200,0,0.5)]"
+                  width={300}
+                  height={300}
+                  className="drop-shadow-[0_0_40px_rgba(255,200,0,0.6)]"
                 />
               </div>
-
-              {/* Additional lighting effects */}
             </div>
           </div>
 
           {/* Right Column */}
-          <div className="col-span-3 flex flex-col gap-4">
+          <div className="col-span-3 flex flex-col gap-6">
             {Array(3)
               .fill("Electrician Digital Marketing")
               .map((text, index) => (
                 <div
                   key={`right-${index}`}
-                  className="group relative w-40 h-12 bg-black/40 "
+                  className="group relative w-64 h-16 text-left bg-black/40 p-3"
                 >
                   <div className="flex items-center justify-start h-full">
-                    <FaDiamond className="w-4 h-4 text-primary" />
-                    <span className="text-white text-xs font-medium leading-tight mr-2">
+                    <FaDiamond className="w-6 h-6 text-primary mr-3" />
+                    <span className="text-white text-base font-semibold leading-snug">
                       {text}
                     </span>
                   </div>
@@ -177,37 +151,36 @@ export default function Industries() {
               ))}
           </div>
 
-          {/* Bottom 3 rows - spanning full width */}
-          <div className="col-span-12 grid grid-cols-4 gap-4 mt-8">
+          {/* Bottom 3 rows */}
+          <div className="col-span-12 grid grid-cols-4 gap-6 mt-12">
             {Array(4)
               .fill("Electrician Digital Marketing")
               .map((text, index) => (
                 <div
                   key={`bottom-1-${index}`}
-                  className="group relative w-40 h-12 bg-black/40 "
+                  className="group relative w-64 h-16 text-left bg-black/40 p-3"
                 >
                   <div className="flex items-center justify-center h-full">
-                    <FaDiamond className="w-4 h-4 text-primary mr-2 " />
-                    <span className="text-white text-xs font-medium leading-tight">
+                    <FaDiamond className="w-6 h-6 text-primary mr-3" />
+                    <span className="text-white text-base font-semibold leading-snug">
                       {text}
                     </span>
                   </div>
-                  <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-amber-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
               ))}
           </div>
 
-          <div className="col-span-12 grid grid-cols-4 gap-4 mt-4">
+          <div className="col-span-12 grid grid-cols-4 gap-6 mt-6">
             {Array(4)
               .fill("Electrician Digital Marketing")
               .map((text, index) => (
                 <div
                   key={`bottom-2-${index}`}
-                  className="group relative w-40 h-12 bg-black/40 "
+                  className="group relative w-64 h-16 text-left bg-black/40 p-3"
                 >
                   <div className="flex items-center justify-center h-full">
-                    <FaDiamond className="w-4 h-4 text-primary mr-2" />
-                    <span className="text-white text-xs font-medium leading-tight">
+                    <FaDiamond className="w-6 h-6 text-primary mr-3" />
+                    <span className="text-white text-base font-semibold leading-snug">
                       {text}
                     </span>
                   </div>
@@ -215,17 +188,17 @@ export default function Industries() {
               ))}
           </div>
 
-          <div className="col-span-12 grid grid-cols-4 gap-4 mt-4">
+          <div className="col-span-12 grid grid-cols-4 gap-6 mt-6">
             {Array(4)
               .fill("Electrician Digital Marketing")
               .map((text, index) => (
                 <div
                   key={`bottom-3-${index}`}
-                  className="group relative w-40 h-12 bg-black/40 "
+                  className="group relative w-64 h-16 text-left bg-black/40 p-3"
                 >
                   <div className="flex items-center justify-center h-full">
-                    <FaDiamond className="w-4 h-4 text-primary mr-2 " />
-                    <span className="text-white text-xs font-medium leading-tight">
+                    <FaDiamond className="w-6 h-6 text-primary mr-3" />
+                    <span className="text-white text-base font-semibold leading-snug">
                       {text}
                     </span>
                   </div>
