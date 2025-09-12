@@ -102,7 +102,7 @@ const Dropdown: React.FC<DropdownProps> = ({ isOpen, onClose }) => {
             </div>
 
             {/* Free Audit Button */}
-            <button className="mt-4 bg-primary text-black font-semibold px-5 py-2 w-40 rounded-md">
+            <button className="mt-4 bg-primary text-black font-semibold px-5 py-4 w-40 rounded-md cursor-pointer">
               Free audit
             </button>
           </div>
