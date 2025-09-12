@@ -1,13 +1,21 @@
 "use client";
-
+import React, { useState } from "react";
 import Image from "next/image";
+import Dropdown from "./menuDropDown";
 
 export default function Hero() {
+  const [open, setOpen] = useState(false);
   return (
     <section className="bg-bg text-white min-h-screen flex flex-col">
       {/* Navbar / Logo */}
-      <header className="flex items-center justify-between px-8 py-10">
-        <Image src="/logo.svg" alt="Logo" width={70} height={70} />
+      <header className="flex items-center justify-between px-8 py-10 relative">
+        {/* Logo with click handler */}
+        <div onClick={() => setOpen(!open)} className="cursor-pointer">
+          <Image src="/logo.svg" alt="Logo" width={70} height={70} />
+        </div>
+
+        {/* Dropdown */}
+        <Dropdown isOpen={open} onClose={() => setOpen(false)} />
       </header>
 
       {/* Hero Content */}
