@@ -29,7 +29,7 @@ const Dropdown: React.FC<DropdownProps> = ({ isOpen, onClose }) => {
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 text-black text-xl bg-primary rounded-full px-2 z-20"
+          className="absolute top-3 right-3 text-black text-xl bg-primary rounded-full px-2 z-20 cursor-pointer"
         >
           ✕
         </button>
