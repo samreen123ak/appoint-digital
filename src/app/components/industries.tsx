@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { FaDiamond } from "react-icons/fa6";
 import AnimatedUnionBoxes from "./industriesAnimation";
+import BlurText from "./BlurText";
 
 export default function Industries() {
   return (
@@ -29,8 +30,21 @@ export default function Industries() {
       <div className="relative z-10 mx-auto text-center">
         {/* Header */}
         <div className="mb-20">
-          <h2 className="text-6xl font-semibold text-white mb-8">
-            Industries We Work With
+          <h2 className="text-6xl font-semibold text-white mb-8 flex flex-col items-center justify-center">
+            <BlurText
+              text="Industries"
+              delay={100}
+              animateBy="words"
+              direction="top"
+              className="block"
+            />
+            <BlurText
+              text="We Work With"
+              delay={150}
+              animateBy="words"
+              direction="top"
+              className="block text-primary"
+            />
           </h2>
           <p className="text-gray-300 max-w-3xl mx-auto text-xl leading-relaxed">
             At Blitz, we extend our Digital Marketing Agency expertise across a
