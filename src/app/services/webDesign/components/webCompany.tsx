@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-
+import BlurText from "@/app/components/BlurText";
 export default function WebCompany() {
   return (
     <section className="relative w-full h-screen bg-bg">
@@ -21,10 +21,26 @@ export default function WebCompany() {
       <div className="relative z-10 px-32 py-24 container mx-auto ">
         {/* title row */}
         <div className="flex justify-between items-center ">
-          <h1 className="text-4xl font-bold">
+          <h1 className="flex flex-col">
+            <BlurText
+              text="Recognised as a Leading"
+              delay={120}
+              animateBy="words"
+              direction="top"
+              className="text-5xl font-[600px] text-black "
+            />
+            <BlurText
+              text="Web Design Company"
+              delay={120}
+              animateBy="words"
+              direction="top"
+              className="text-5xl font-[600px] text-black leading-relaxed"
+            />
+          </h1>
+          {/* <h1 className="text-4xl font-bold">
             Recognised as a Leading
             <br /> Web Design Company
-          </h1>
+          </h1> */}
           <p className=" text-xs max-w-sm">
             This document serves to act as a contract between the client and our
             agency. It details the scopeof the project, pricing, feedback

@@ -92,9 +92,9 @@ const IndustriesDropDown: React.FC<Props> = ({ isOpen, onClose }) => {
         </div>
 
         {/* Corner Globe */}
-        <div className="absolute right-0 bottom-[105px] -z-10">
+        <div className="absolute -right-72 -bottom-[220px]  -z-10">
           <Image
-            src="/images/cornerGlobe.svg"
+            src="/images/globeYellowbg.svg"
             alt="graphic"
             width={700}
             height={700}

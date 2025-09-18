@@ -152,5 +152,13 @@
     @apply bg-background text-foreground;
   }
 }
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* scroll half of repeated content */
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+}
 
 

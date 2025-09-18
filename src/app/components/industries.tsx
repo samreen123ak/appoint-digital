@@ -30,7 +30,7 @@ export default function Industries() {
       <div className="relative z-10 mx-auto text-center">
         {/* Header */}
         <div className="mb-20">
-          <h2 className="text-6xl font-semibold text-white mb-8 flex flex-col items-center justify-center">
+          <h2 className="text-6xl font-[600px] text-white mb-8 flex flex-col items-center justify-center">
             <BlurText
               text="Industries"
               delay={100}

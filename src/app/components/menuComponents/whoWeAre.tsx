@@ -64,13 +64,13 @@ const WhoWeAreDropDown: React.FC<Props> = ({ isOpen, onClose }) => {
           />
         </div>
         <div className="space-y-5 p-20">{renderColumn(col1)}</div>
-        <div className="absolute right-0 top-[30%] -translate-y-1/2 z-0">
+        <div className="absolute -right-72 top-[30%] -translate-y-1/2 z-0">
           <Image
-            src="/images/globehalf1.svg"
+            src="/images/globeYellowbg.svg"
             alt="Dropdown Graphic"
-            width={250}
-            height={250}
-            className="object-contain"
+            width={700}
+            height={700}
+            className="object-contain rotate-180"
           />
         </div>
         <div className="flex justify-center w-full mt-18 ">

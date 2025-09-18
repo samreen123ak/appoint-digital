@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function DesignRole() {
   return (
@@ -8,18 +9,26 @@ export default function DesignRole() {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* LEFT SIDE - Globe */}
         <div className="relative flex justify-start">
-          <Image
-            src="/images/globehalf2.svg"
-            alt="Globe"
-            width={400}
-            height={400}
-            className="object-contain"
-          />
+          <motion.div
+            className="relative flex justify-start"
+            initial={{ x: -200, scale: 0.8, opacity: 0 }} // start hidden, left, small
+            whileInView={{ x: 0, scale: 1.2, opacity: 1 }} // animate to center + bigger
+            viewport={{ once: false, amount: 0.3 }} // trigger every time it comes into view
+            transition={{ duration: 1.2, ease: "easeOut" }} // smooth animation
+          >
+            <Image
+              src="/images/halfGlobeleft.svg"
+              alt="Globe"
+              width={400}
+              height={400}
+              className="object-contain"
+            />
+          </motion.div>
         </div>
 
         {/* RIGHT SIDE (Text Section) */}
         <div className="space-y-6 pr-20">
-          <h2 className="text-4xl font-bold leading-snug text-primary">
+          <h2 className="text-4xl font-[600px] leading-snug text-primary">
             The Role of a Global Digital
             <br /> Marketing Agency
           </h2>
@@ -38,7 +47,7 @@ export default function DesignRole() {
             our clients at the cutting edge of digital advancements.
           </p>
 
-          <h2 className="text-4xl font-bold leading-snug text-primary">
+          <h2 className="text-4xl font-[600px] leading-snug text-primary">
             The Role of a Global Digital
             <br /> Marketing Agency
           </h2>

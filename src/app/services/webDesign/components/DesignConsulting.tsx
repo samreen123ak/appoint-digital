@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function DesignConsulting() {
   return (
@@ -8,7 +9,7 @@ export default function DesignConsulting() {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center pl-20 relative z-10">
         {/* LEFT SIDE */}
         <div>
-          <h2 className="text-4xl font-bold leading-snug text-primary mb-5">
+          <h2 className="text-4xl font-[600px] leading-snug text-primary mb-5">
             Web Design Consulting:
             <br /> Elevating Your Online Presence
           </h2>
@@ -67,13 +68,21 @@ export default function DesignConsulting() {
       </div>
 
       {/* RIGHT SIDE - Globe (Bleeds out to screen edge) */}
-      <Image
-        src="/images/globehalf1.svg"
-        alt="Globe"
-        width={400}
-        height={300}
-        className="absolute right-0 top-[10%] object-contain "
-      />
+      <motion.div
+        initial={{ x: 200, scale: 0.8, opacity: 0 }} // start hidden on right
+        whileInView={{ x: 0, scale: 1, opacity: 1 }} // slide to position
+        viewport={{ once: false, amount: 0.3 }} // animate every time on scroll
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        className="absolute right-0 top-[15%]"
+      >
+        <Image
+          src="/images/halfGlobeleft.svg"
+          alt="Globe"
+          width={500}
+          height={500}
+          className="  right-0  object-contain rotate-180"
+        />
+      </motion.div>
     </section>
   );
 }

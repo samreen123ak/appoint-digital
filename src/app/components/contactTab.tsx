@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import BlurText from "./BlurText";
 
 export default function ContactTabs() {
   const [active, setActive] = useState<"contact" | "call">("contact");
@@ -18,17 +19,33 @@ export default function ContactTabs() {
         />
       </div>
 
-      <div className="relative z-10 flex items-center justify-center h-full px-6">
-        <div className="text-center max-w-4xl mx-auto mt-15">
-          <h1 className="text-6xl font-[600px] text-black mb-8 leading-tight">
-            Take Your Digital Success
-            <br />
-            to the Next Level
-            <br />
-            with Us!
-          </h1>
+      <div className="relative z-10 flex items-center justify-center h-screen w-full px-6">
+        <div className="text-center  mt-15 mx-auto">
+          <h2 className="text-6xl font-[600px] text-black mb-8 flex flex-col items-center justify-center leading-tight">
+            <BlurText
+              text="Take Your Digital"
+              delay={100}
+              animateBy="words"
+              direction="top"
+              className="block"
+            />
+            <BlurText
+              text="Success to the Next"
+              delay={150}
+              animateBy="words"
+              direction="top"
+              className="block "
+            />
+            <BlurText
+              text="Level with Us!"
+              delay={150}
+              animateBy="words"
+              direction="top"
+              className="block "
+            />
+          </h2>
 
-          <p className="text-lg md:text-xl text-black mb-12 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-black  mb-12 max-w-4xl mx-auto leading-relaxed">
             Partner with our web agency to turn data into growth, insights into
             impact, and strategies into success. Lets make every digital move
             count

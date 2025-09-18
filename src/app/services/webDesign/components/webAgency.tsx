@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import BlurText from "@/app/components/BlurText";
+import PixelCard from "@/components/PixelCard";
 
 export default function WebAgency() {
   const features = [
@@ -46,20 +48,25 @@ export default function WebAgency() {
 
       {/* Globe Background (Middle Layer) */}
       <Image
-        src="/images/globebg.svg"
+        src="/images/globeYellowbg.svg"
         alt="Background"
         fill
         priority
-        className="object-cover z-10 "
+        className="object-cover z-10 animate-spin-slow "
       />
 
       {/* Content (Top Layer) */}
       <div className="relative z-20  flex flex-col justify-center items-center">
         {/* Heading */}
         <div className="mb-16 max-w-xl flex flex-col justify-center items-center text-center">
-          <h2 className="text-5xl  font-extrabold">
-            <span className="text-primary">Web Design Agency.</span>
-          </h2>
+          <BlurText
+            text="Web Design Agency."
+            delay={120}
+            animateBy="words"
+            direction="top"
+            className="text-6xl font-[600px] text-white"
+          />
+
           <h3 className="text-md  tracking-widest text-white font-bold mt-5">
             Bespoke web design services .
           </h3>
@@ -77,28 +84,66 @@ export default function WebAgency() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {[...Array(6)].map((_, idx) => (
-            <div
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-5 max-w-screen">
+          {[...Array(8)].map((_, idx) => (
+            <PixelCard
               key={idx}
-              className="bg-gray-500/20 border border-yellow-500/40 rounded-2xl px-6 pt-5 flex flex-col items-start hover:bg-yellow-500/10 transition"
+              variant="pink"
+              gap={6}
+              speed={80}
+              colors="#ffffff,#FFD74B"
+              noFocus={true}
             >
-              {/* Main Title */}
-              <h2 className="text-2xl font-bold text-primary text-left mb-3">
-                E-commerce Web
-                <br /> Design
-              </h2>
-
-              {/* Features */}
-              <div className="grid grid-cols-1 text-left mb-3 w-68">
-                {features.map((f, i) => (
-                  <div key={i} className="mb-3">
-                    <h3 className="text-yellow-400 font-semibold">{f.title}</h3>
-                    <p className="text-gray-300 text-sm">{f.subtitle}</p>
+              <div className="pixel-card  absolute">
+                <div></div>
+                <div>
+                  {/* Main Title */}
+                  <h2 className="text-xl font-bold text-primary text-left px-3 mb-2 ">
+                    E-commerce Web
+                    <br /> Design
+                  </h2>
+                  <div className="mb-3 text-left pl-3">
+                    <h3 className="text-yellow-400 text-sm font-semibold">
+                      Optimized Shopping Interface:
+                    </h3>
+                    <p className="text-gray-300 text-xs text-left">
+                      Intuitive purchasing process with user-friendly site
+                      navigation.
+                    </p>
                   </div>
-                ))}
+                  <div className="mb-3 text-left pl-3">
+                    <h3 className="text-yellow-400 text-sm font-semibold">
+                      Optimized Shopping Interface:
+                    </h3>
+                    <p className="text-gray-300 text-xs text-left">
+                      Intuitive purchasing process with user-friendly site
+                      navigation.
+                    </p>
+                  </div>
+                  <div className="mb-3 text-left pl-3">
+                    <h3 className="text-yellow-400 text-sm font-semibold">
+                      Optimized Shopping Interface:
+                    </h3>
+                    <p className="text-gray-300 text-xs text-left">
+                      Intuitive purchasing process with user-friendly site
+                      navigation.
+                    </p>
+                  </div>
+
+                  {/* Features */}
+                  {/* <div className="grid grid-cols-1 text-left mb-3  ">
+                    {features.map((f, i) => (
+                      <div key={i} className="mb-3">
+                        <h3 className="text-yellow-400 font-semibold">
+                          {f.title}
+                        </h3>
+                        <p className="text-gray-300 text-sm">{f.subtitle}</p>
+                      </div>
+                    ))}
+                  </div> */}
+                </div>
               </div>
-            </div>
+            </PixelCard>
           ))}
         </div>
       </div>

@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import BlurText from "./BlurText";
 
 export default function ArticlesSection() {
   const articles = [
@@ -28,14 +29,19 @@ export default function ArticlesSection() {
   return (
     <section className="bg-black text-white py-20">
       {/* Heading Section */}
-      <div className="text-center mb-16">
-        <p className="text-gray-400 text-sm uppercase tracking-wide">
+      <div className=" flex flex-col justify-center items-center text-center mb-16">
+        <p className="text-gray-400 text-sm uppercase tracking-wide mb-5">
           Learn Everything
         </p>
-        <h2 className="text-6xl  font-[600px] mt-2">
-          Your Next Big Move in the Digital World
-        </h2>
-        <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
+        <BlurText
+          text=" Your Next Big Move in the Digital World"
+          delay={120}
+          animateBy="words"
+          direction="top"
+          className="text-6xl font-light text-center text-white"
+        />
+
+        <p className="mt-10 text-gray-400 max-w-2xl mx-auto ">
           With Appoint Digital, you can easily stay aware of all the updates in
           the marketing domain. So what are you waiting for? Stay ahead with
           insights that drive smarter decisions and real growth.

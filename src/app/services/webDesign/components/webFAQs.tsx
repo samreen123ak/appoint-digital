@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { GoPlus } from "react-icons/go";
 import { RxCross1 } from "react-icons/rx";
+import BlurText from "@/app/components/BlurText";
 
 interface FAQ {
   id: number;
@@ -73,19 +74,31 @@ const WebFAQSection: React.FC = () => {
     <section className="relative bg-black text-white py-28 px-4 flex justify-center items-center">
       {/* Background Image */}
       <Image
-        src="/images/faqBG.svg"
+        src="/images/globeYellowbg.svg"
         alt="FAQ Background"
-        width={800}
-        height={800}
-        className="absolute inset-0  top-30 left-[18%] object-cover mb-25  "
+        width={1000}
+        height={1000}
+        className="absolute inset-0  top-24 left-[13%] object-cover mb-25 animate-spin-slow opacity-50  "
       />
 
       {/* Overlay Content */}
       <div className="relative z-10 max-w-5xl w-full">
-        <h2 className="text-5xl font-bold text-center mb-10">
-          Web Design Company
-          <br /> FAQs at <span className="text-primary">Appoint Digital</span>
-        </h2>
+        <div className=" flex flex-col justify-center items-center mb-10">
+          <BlurText
+            text="Web Design Company"
+            delay={120}
+            animateBy="words"
+            direction="top"
+            className="text-6xl font-[600px] text-white"
+          />
+          <BlurText
+            text="FAQs at Appoint Digital"
+            delay={120}
+            animateBy="words"
+            direction="top"
+            className="text-6xl font-[600px] text-white leading-relaxed"
+          />
+        </div>
 
         <div className="space-y-5">
           {faqs.map((faq) => (

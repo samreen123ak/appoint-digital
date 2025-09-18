@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import BlurText from "@/app/components/BlurText";
+import { motion } from "framer-motion";
 
 const services = [
   "Custom Website Design",
@@ -20,16 +22,23 @@ export default function CustomWebsite() {
     <section className="relative bg-bg text-white overflow-hidden">
       {/* Right-side globe as background */}
       <div className="absolute right-0 top-1/2 -translate-y-1/2 z-0">
-        <div className="relative ">
-          <Image
-            src="/images/customwebBg.svg"
-            alt="Globe background"
-            width={500}
-            height={500}
-            className="object-contain "
-            priority
-          />
-          <div className="absolute -inset-40 " />
+        <div className="relative h-[600px] w-[700px]">
+          <motion.div
+            initial={{ x: 200, scale: 0.8, opacity: 0 }}
+            whileInView={{ x: 0, scale: 1, opacity: 1 }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+            className="absolute right-0 "
+          >
+            <Image
+              src="/images/halfGlobeleft.svg"
+              alt="Globe"
+              width={500}
+              height={500}
+              priority
+              className="object-cover rotate-180"
+            />
+          </motion.div>
         </div>
       </div>
 
@@ -37,10 +46,21 @@ export default function CustomWebsite() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-20">
         {/* Heading */}
         <div className="max-w-3xl">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-primary leading-tight">
-            Complete Solutions for a <br />
-            Website That Stands Out
-          </h2>
+          <BlurText
+            text="Complete Solutions for a "
+            delay={120}
+            animateBy="words"
+            direction="top"
+            className="text-5xl font-[600px] text-white"
+          />
+          <BlurText
+            text="Website That Stands Out "
+            delay={120}
+            animateBy="words"
+            direction="top"
+            className="text-5xl font-[600px] text-white leading-relaxed"
+          />
+
           <p className="mt-4 text-gray-300">
             We offer a variety of web design services to make your business
             shine online.
@@ -54,7 +74,7 @@ export default function CustomWebsite() {
               <button
                 key={svc}
                 onClick={() => setActiveTab(idx)}
-                className={`px-3 py-4 text-xs sm:text-sm font-semibold leading-snug whitespace-normal m-1 rounded-full break-words ${
+                className={`px-3 py-4 text-xs sm:text-sm font-semibold leading-snug whitespace-normal m-1 rounded-full break-words transition-all duration-300 ease-in-out ${
                   activeTab === idx
                     ? "bg-primary text-black"
                     : "text-primary  hover:cursor-pointer"
@@ -68,7 +88,7 @@ export default function CustomWebsite() {
 
         {/* Section below shows active tab content */}
         <div className="mt-12 max-w-2xl">
-          <h3 className="text-2xl font-semibold text-yellow-500">
+          <h3 className="text-2xl font-semibold text-primary">
             {services[activeTab]}
           </h3>
           <p className="mt-2 text-gray-300">

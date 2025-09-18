@@ -256,12 +256,12 @@ export default function ServicesSection() {
       {/* Globe Background */}
       <div className="absolute inset-0 flex items-end justify-center z-10 pointer-events-none">
         <Image
-          src="/images/globebg.svg"
+          src="/images/globeYellowbg.svg"
           alt="Background"
-          width={1200}
-          height={1200}
+          width={1600}
+          height={1600}
           priority
-          className="object-contain"
+          className="object-contain animate-spin-slow"
         />
       </div>
 
@@ -273,13 +273,13 @@ export default function ServicesSection() {
             Leading digital marketing Firm.
           </h3>
           <div className="flex justify-center">
-          <BlurText
-            text="Appoint Digital Solutions"
-            delay={150}
-            animateBy="words"
-            direction="top"
-            className="text-6xl font-[600px] text-white"
-          />
+            <BlurText
+              text="Appoint Digital Solutions"
+              delay={150}
+              animateBy="words"
+              direction="top"
+              className="text-6xl font-[600px] text-white"
+            />
           </div>
         </div>
 
@@ -295,7 +295,7 @@ export default function ServicesSection() {
               noFocus={true}
             >
               <div className="pixel-card absolute">
-                <div className="p-8 flex flex-col items-center text-center justify-center h-full w-full">
+                <div className="p-8 flex flex-col items-center text-center justify-center ">
                   <div className="mb-6">
                     <Image
                       src={service.icon}

@@ -47,7 +47,7 @@
 //             ].map((brand, i) => (
 //               <div
 //                 key={i}
-//                 className={`flex items-center justify-center h-28 w-52 rounded-full border border-gray-400/50 
+//                 className={`flex items-center justify-center h-28 w-52 rounded-full border border-gray-400/50
 //       ${i === 1 || i === 3 || i === 5 ? "bg-primary" : "bg-black"}`}
 //               >
 //                 <Image
@@ -70,7 +70,7 @@
 //             ].map((brand, i) => (
 //               <div
 //                 key={i}
-//                 className={`flex items-center justify-center h-28 w-52 rounded-full border border-gray-400/50 
+//                 className={`flex items-center justify-center h-28 w-52 rounded-full border border-gray-400/50
 //       ${i === 1 || i === 3 || i === 5 ? "bg-primary" : "bg-black"}`}
 //               >
 //                 <Image
@@ -203,7 +203,7 @@ export default function BrandSection() {
       <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 z-20">
         <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-[500px] md:h-[500px] lg:w-[700px] lg:h-[700px]">
           <Image
-            src="/images/globeb.svg"
+            src="/images/globeYellowbg.svg"
             alt="Global Reach"
             fill
             className="object-contain drop-shadow-2xl animate-spin-slow"
