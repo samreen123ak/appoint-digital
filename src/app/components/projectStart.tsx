@@ -33,7 +33,7 @@ export default function StartProject() {
         <p className="text-lg leading-relaxed max-w-lg">
           Do you have a digital marketing objective{" "}
           <span className="relative inline-block  group cursor-pointer">
-            you'd like to achieve?
+            you&apos;d like to achieve?
             <span className="absolute right-0 bottom-0 h-[2px] w-full bg-white origin-right scale-x-100 transition-transform duration-500 group-hover:scale-x-0 "></span>
           </span>{" "}
           Are you ready to find out how Bird can help to{" "}
