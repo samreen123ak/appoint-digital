@@ -91,22 +91,22 @@ export default function AppointSection() {
 
       <div className="container mx-auto px-6 text-center relative z-10">
         {/* Animated Title */}
-  <h2 className="text-5xl md:text-6xl leading-snug text-gray-900 mb-4 text-center flex flex-col items-center justify-center">
-  <BlurText
-    text="Best brands choose"
-    delay={120}
-    animateBy="words"
-    direction="top"
-    className="block"
-  />
-  <BlurText
-    text="Appoint Digital"
-    delay={120}
-    animateBy="words"
-    direction="top"
-    className="block text-[#FFD74B]"
-  />
-</h2>
+        <h2 className="text-5xl md:text-6xl leading-snug text-gray-900 mb-4 text-center flex flex-col items-center justify-center">
+          <BlurText
+            text="Best brands choose"
+            delay={120}
+            animateBy="words"
+            direction="top"
+            className="block"
+          />
+          <BlurText
+            text="Appoint Digital"
+            delay={120}
+            animateBy="words"
+            direction="top"
+            className="block font-bold text-[#FFD74B]"
+          />
+        </h2>
 
         {/* Subtitle */}
         <p className="text-gray-600 mt-6 max-w-2xl mx-auto text-lg">
@@ -126,7 +126,7 @@ export default function AppointSection() {
             ].map((brand, i) => (
               <div
                 key={i}
-                className="flex-shrink-0 w-40 h-24 rounded-2xl shadow-md bg-white flex items-center justify-center border border-gray-200 hover:scale-110 hover:shadow-xl transition-transform duration-300"
+                className="flex-shrink-0 w-40 h-24 rounded-2xl shadow-md bg-white flex items-center justify-center border border-gray-200  "
               >
                 <Image
                   src={brand}
@@ -147,7 +147,7 @@ export default function AppointSection() {
             ].map((brand, i) => (
               <div
                 key={i + 100}
-                className="flex-shrink-0 w-40 h-24 rounded-2xl shadow-md bg-white flex items-center justify-center border border-gray-200 hover:scale-110 hover:shadow-xl transition-transform duration-300"
+                className="flex-shrink-0 w-40 h-24 rounded-2xl shadow-md bg-white flex items-center justify-center border border-gray-200 "
               >
                 <Image
                   src={brand}

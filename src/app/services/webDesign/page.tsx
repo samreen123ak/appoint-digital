@@ -13,6 +13,8 @@ import ContactTabs from "@/app/components/contactTab";
 import Footer from "@/app/components/footer";
 import WebFAQSection from "./components/webFAQs";
 import Header from "@/app/components/header";
+import ProjectStart from "../../components/projectStart";
+import SuccessfulProjects from "../../components/succesfullProject";
 
 export default function WebDesign() {
   return (
@@ -20,7 +22,8 @@ export default function WebDesign() {
       <Header />
       <WebHero />
       <WebAgency />
-      <WebProject />
+      <ProjectStart />
+      <SuccessfulProjects />
       <ReviewSection />
       <ProjectCarousel />
       <WebCompany />

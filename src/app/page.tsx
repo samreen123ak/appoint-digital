@@ -13,6 +13,8 @@ import ServicesSection from "./components/serviceSection";
 import StartProject from "./components/startProject";
 import ThriveSection from "./components/thriveSection";
 import AOSWrapper from "./components/aosProvider";
+import ProjectStart from "./components/projectStart";
+import SuccessfulProjects from "./components/succesfullProject";
 
 export default function Home() {
   return (
@@ -22,10 +24,10 @@ export default function Home() {
         <Hero />
         <BrandSection />
         <ServicesSection />
-
         <AppointSection />
         <Industries />
-        <StartProject />
+        <ProjectStart />
+        <SuccessfulProjects />
         <AgencyIntro />
         <AgencyRole />
         <ArticlesSection />

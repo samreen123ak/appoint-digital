@@ -215,7 +215,7 @@ export default function Industries() {
         </div>
       </div>
       {/* 🔥 Center Cube absolutely centered */}
-      <div className="absolute left-[40%] top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+      <div className="absolute left-[40%] top-[52%] -translate-x-1/2 -translate-y-1/2 z-20">
         <div className="w-32 h-32">
           <AnimatedUnionBoxes />
         </div>

@@ -9,7 +9,7 @@ export default function DesignRole() {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* LEFT SIDE - Globe */}
         <div className="relative flex justify-start">
-          <motion.div
+          {/* <motion.div
             className="relative flex justify-start"
             initial={{ x: -200, scale: 0.8, opacity: 0 }} // start hidden, left, small
             whileInView={{ x: 0, scale: 1.2, opacity: 1 }} // animate to center + bigger
@@ -21,6 +21,21 @@ export default function DesignRole() {
               alt="Globe"
               width={400}
               height={400}
+              className="object-contain"
+            />
+          </motion.div> */}
+          <motion.div
+            className="relative flex justify-start"
+            initial={{ x: -200, scale: 0.8, opacity: 0 }} // start hidden, left, small
+            whileInView={{ x: 0, scale: 1.2, opacity: 1 }} // animate to center + bigger
+            viewport={{ once: false, amount: 0.3 }} // trigger every time it comes into view
+            transition={{ duration: 1.2, ease: "easeOut" }} // smooth animation
+          >
+            <Image
+              src="/images/halfGlobeleft.svg"
+              alt="Globe"
+              width={900}
+              height={900}
               className="object-contain"
             />
           </motion.div>

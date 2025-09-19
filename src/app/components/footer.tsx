@@ -62,12 +62,12 @@ const Footer: React.FC = () => {
           </p>
 
           {/* Middle: Terms & Conditions */}
-          <a
+          {/* <a
             href="/terms"
             className="text-xs text-gray-300 hover:text-primary transition-colors duration-200 ml-[220px]"
           >
             Terms & Conditions
-          </a>
+          </a> */}
         </div>
 
         {/* Right side: Social Icons */}
@@ -85,14 +85,24 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Footer text image */}
-      <div className="relative z-10 flex justify-center items-center mt-6">
-        <Image
-          src="/images/textFooter.svg"
-          alt="Footer Text"
-          width={1200}
-          height={1200}
-          className="object-cover"
-        />
+      <div className="relative z-10 mt-6 overflow-hidden">
+        <div className="animate-marquee whitespace-nowrap flex">
+          <Image
+            src="/images/textFooter.svg"
+            alt="Footer Text"
+            width={1200}
+            height={1200}
+            className="object-cover"
+          />
+          {/* duplicate image for seamless loop */}
+          <Image
+            src="/images/textFooter.svg"
+            alt="Footer Text Duplicate"
+            width={1200}
+            height={1200}
+            className="object-cover  ml-8"
+          />
+        </div>
       </div>
     </footer>
   );

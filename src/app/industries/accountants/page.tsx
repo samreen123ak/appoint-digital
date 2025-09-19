@@ -10,13 +10,16 @@ import DesignTools from "@/app/services/webDesign/components/designTool";
 import WebFAQSection from "@/app/services/webDesign/components/webFAQs";
 import ContactTabs from "@/app/components/contactTab";
 import Footer from "@/app/components/footer";
+import ProjectStart from "../../components/projectStart";
+import SuccessfulProjects from "../../components/succesfullProject";
 
 export default function Accountants() {
   return (
     <section>
       <AcountHero />
       <WebAgency />
-      <WebProject />
+      <ProjectStart />
+      <SuccessfulProjects />
       <ReviewSection />
       <ProjectCarousel />
       <WebCompany />

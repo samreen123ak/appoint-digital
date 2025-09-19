@@ -28,6 +28,7 @@ export default function AcountHero() {
               delay={120}
               animateBy="words"
               direction="top"
+              align="left"
               className="text-6xl font-[600px] text-white"
             />
             <BlurText
@@ -35,6 +36,7 @@ export default function AcountHero() {
               delay={120}
               animateBy="words"
               direction="top"
+              align="left"
               className="text-6xl font-[600px] text-white leading-relaxed"
             />
             <BlurText
@@ -42,6 +44,7 @@ export default function AcountHero() {
               delay={120}
               animateBy="words"
               direction="top"
+              align="left"
               className="text-6xl font-[600px] text-white "
             />
           </h1>

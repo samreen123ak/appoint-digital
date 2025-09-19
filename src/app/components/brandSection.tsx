@@ -129,6 +129,7 @@ export default function BrandSection() {
               delay={120}
               animateBy="words"
               direction="top"
+              align="left"
               className="text-6xl font-light text-black"
             />
             <BlurText
@@ -136,11 +137,12 @@ export default function BrandSection() {
               delay={150}
               animateBy="words"
               direction="top"
+              align="left"
               className="text-6xl font-bold text-black"
             />
           </div>
 
-          <p className="text-lg text-black mt-3 max-w-3xl mb-15">
+          <p className="text-lg text-black text-start mt-3 max-w-3xl mb-15">
             As a trusted Digital Marketing Agency Company, Bird has been
             featured in top-tier media and industry-leading platforms,
             showcasing our expertise in delivering exceptional digital marketing
@@ -157,12 +159,10 @@ export default function BrandSection() {
               "/images/brand3.svg",
               "/images/brand4.svg",
               "/images/brand5.svg",
-              "/images/brand4.svg",
             ].map((brand, i) => (
               <div
                 key={i}
-                className={`flex items-center justify-center h-28 w-52 rounded-full border border-gray-400/50 
-        ${i === 1 || i === 3 || i === 5 ? "bg-primary" : "bg-black"}`}
+                className="flex items-center justify-center h-28 w-52 rounded-full border border-gray-400/50 bg-primary"
               >
                 <Image
                   src={brand}
@@ -171,6 +171,19 @@ export default function BrandSection() {
                   height={60}
                 />
               </div>
+
+              //       <div
+              //         key={i}
+              //         className={`flex items-center justify-center h-28 w-52 rounded-full border border-gray-400/50
+              // ${i === 1 || i === 3 || i === 5 ? "bg-primary" : "bg-black"}`}
+              //       >
+              //         <Image
+              //           src={brand}
+              //           alt={`Brand ${i + 1}`}
+              //           width={100}
+              //           height={60}
+              //         />
+              //       </div>
             ))}
 
             {/* Duplicate row for seamless loop */}
@@ -180,12 +193,10 @@ export default function BrandSection() {
               "/images/brand3.svg",
               "/images/brand4.svg",
               "/images/brand5.svg",
-              "/images/brand4.svg",
             ].map((brand, i) => (
               <div
                 key={i}
-                className={`flex items-center justify-center h-28 w-52 rounded-full border border-gray-400/50 
-        ${i === 1 || i === 3 || i === 5 ? "bg-primary" : "bg-black"}`}
+                className="flex items-center justify-center h-28 w-52 rounded-full border border-gray-400/50 bg-primary"
               >
                 <Image
                   src={brand}
@@ -194,6 +205,19 @@ export default function BrandSection() {
                   height={60}
                 />
               </div>
+
+              //       <div
+              //         key={i}
+              //         className={`flex items-center justify-center h-28 w-52 rounded-full border border-gray-400/50
+              // ${i === 1 || i === 3 || i === 5 ? "bg-primary" : "bg-black"}`}
+              //       >
+              //         <Image
+              //           src={brand}
+              //           alt={`Brand ${i + 1}`}
+              //           width={100}
+              //           height={60}
+              //         />
+              //       </div>
             ))}
           </div>
         </div>

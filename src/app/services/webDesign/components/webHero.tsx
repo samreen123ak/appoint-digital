@@ -30,6 +30,7 @@ export default function WebHero() {
             delay={120}
             animateBy="words"
             direction="top"
+            align="left"
             className="text-6xl font-[600px] text-white"
           />
           <BlurText
@@ -37,6 +38,7 @@ export default function WebHero() {
             delay={120}
             animateBy="words"
             direction="top"
+            align="left"
             className="text-6xl font-[600px] text-white leading-relaxed"
           />
           {/* <h1 className="text-6xl font-[600px] text-primary">

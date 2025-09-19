@@ -68,7 +68,7 @@ export default function DesignConsulting() {
       </div>
 
       {/* RIGHT SIDE - Globe (Bleeds out to screen edge) */}
-      <motion.div
+      {/* <motion.div
         initial={{ x: 200, scale: 0.8, opacity: 0 }} // start hidden on right
         whileInView={{ x: 0, scale: 1, opacity: 1 }} // slide to position
         viewport={{ once: false, amount: 0.3 }} // animate every time on scroll
@@ -80,6 +80,21 @@ export default function DesignConsulting() {
           alt="Globe"
           width={500}
           height={500}
+          className="  right-0  object-contain rotate-180"
+        />
+      </motion.div> */}
+      <motion.div
+        initial={{ x: 200, scale: 0.8, opacity: 0 }} // start hidden on right
+        whileInView={{ x: 0, scale: 1, opacity: 1 }} // slide to position
+        viewport={{ once: false, amount: 0.3 }} // animate every time on scroll
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        className="absolute right-0 -top-40"
+      >
+        <Image
+          src="/images/halfGlobeleft.svg"
+          alt="Globe"
+          width={900}
+          height={900}
           className="  right-0  object-contain rotate-180"
         />
       </motion.div>

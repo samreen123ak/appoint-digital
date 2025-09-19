@@ -51,6 +51,7 @@ export default function CustomWebsite() {
             delay={120}
             animateBy="words"
             direction="top"
+            align="left"
             className="text-5xl font-[600px] text-white"
           />
           <BlurText
@@ -58,6 +59,7 @@ export default function CustomWebsite() {
             delay={120}
             animateBy="words"
             direction="top"
+            align="left"
             className="text-5xl font-[600px] text-white leading-relaxed"
           />
 

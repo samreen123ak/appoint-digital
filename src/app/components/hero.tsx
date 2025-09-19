@@ -1,96 +1,157 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import BlurText from "./BlurText";
 
 export default function Hero() {
   return (
-    <section className="bg-bg text-white min-h-screen flex flex-col pt-32">
+    <section className="bg-bg text-white min-h-screen flex flex-col pt-12 sm:pt-12 md:pt-20">
       {/* Hero Content */}
-      <div className="flex  flex-col items-center justify-center text-center w-full  ">
-        <p className="text-2xl mb-2 uppercase text-[#FFD74B]">
+      <div className="flex flex-col items-center justify-center text-center px-4 sm:px-6 md:px-8">
+        <p className="text-sm sm:text-md font-bold mb-2 uppercase text-[#FFD74B]">
           Win at Your Marketing with
         </p>
 
-        {/* <p className="text-2xl mb-2 uppercase">Win at Your Marketing with</p> */}
         <BlurText
-          text=" Appoint Digital Solutions"
+          text="Appoint Digital Solutions"
           delay={120}
           animateBy="words"
           direction="top"
-          className="text-6xl font-[600px] text-white"
+          className="text-3xl sm:text-4xl md:text-6xl font-bold text-center text-white"
         />
-
-        <p className="text-gray-300 text-md max-w-lg mt-3">
+        <p className="text-gray-300 text-sm sm:text-base md:text-lg h-[80px] mt-3 max-w-3xl text-center mx-auto">
           Get Help from Our Data-Centric and Performance-Driven Digital
           Marketing Solution to Enjoy Growth & Edge in the Digital Market Place.
         </p>
       </div>
-      <div className="relative w-[800px] h-[100px] flex items-center mx-auto justify-center overflow-hidden bg-bg">
+
+      {/* Scrolling logos */}
+      <div className="relative w-full max-w-[800px] h-[0px] sm:h-[80px] md:h-[100px] flex items-center mx-auto justify-center overflow-hidden  sm:mt-10 bg-bg">
         {/* Left fade */}
-        <div className="absolute inset-y-0 left-0 w-32 pointer-events-none z-20">
+        <div className="absolute inset-y-0 left-0 w-16 sm:w-24 pointer-events-none z-20">
           <div className="h-full w-full bg-gradient-to-r from-black to-transparent"></div>
         </div>
 
         {/* Right fade */}
-        <div className="absolute inset-y-0 right-0 w-32 pointer-events-none z-20">
+        <div className="absolute inset-y-0 right-0 w-16 sm:w-24 pointer-events-none z-20">
           <div className="h-full w-full bg-gradient-to-l from-black to-transparent"></div>
         </div>
 
         {/* Scrolling images */}
-        <div className="flex animate-scroll gap-8 z-10">
+        <div className="flex animate-scroll gap-6 sm:gap-8 z-10">
           {/* Original images */}
-          <Image src="/images/bravo.svg" alt="Bravo" width={50} height={50} />
-          <Image src="/images/circle.svg" alt="Circle" width={50} height={50} />
+          <Image
+            src="/images/bravo.svg"
+            alt="Bravo"
+            width={40}
+            height={40}
+            className="sm:w-[50px] sm:h-[50px]"
+          />
+          <Image
+            src="/images/circle.svg"
+            alt="Circle"
+            width={40}
+            height={40}
+            className="sm:w-[50px] sm:h-[50px]"
+          />
           <Image
             src="/images/discord.svg"
             alt="Discord"
-            width={50}
-            height={50}
+            width={40}
+            height={40}
+            className="sm:w-[50px] sm:h-[50px]"
           />
-          <Image src="/images/google.svg" alt="Google" width={50} height={50} />
-          <Image src="/images/jump.svg" alt="Jump" width={50} height={50} />
+          <Image
+            src="/images/google.svg"
+            alt="Google"
+            width={40}
+            height={40}
+            className="sm:w-[50px] sm:h-[50px]"
+          />
+          <Image
+            src="/images/jump.svg"
+            alt="Jump"
+            width={40}
+            height={40}
+            className="sm:w-[50px] sm:h-[50px]"
+          />
           <Image
             src="/images/lollapaloza.svg"
             alt="LP"
-            width={50}
-            height={50}
+            width={40}
+            height={40}
+            className="sm:w-[50px] sm:h-[50px]"
           />
           <Image
             src="/images/magiceden.svg"
             alt="Magic"
-            width={50}
-            height={50}
+            width={40}
+            height={40}
+            className="sm:w-[50px] sm:h-[50px]"
           />
 
-          {/* Repeat images for seamless loop */}
-          <Image src="/images/bravo.svg" alt="Bravo" width={50} height={50} />
-          <Image src="/images/circle.svg" alt="Circle" width={50} height={50} />
+          {/* Repeat for seamless loop */}
+          <Image
+            src="/images/bravo.svg"
+            alt="Bravo"
+            width={40}
+            height={40}
+            className="sm:w-[50px] sm:h-[50px]"
+          />
+          <Image
+            src="/images/circle.svg"
+            alt="Circle"
+            width={40}
+            height={40}
+            className="sm:w-[50px] sm:h-[50px]"
+          />
           <Image
             src="/images/discord.svg"
             alt="Discord"
-            width={50}
-            height={50}
+            width={40}
+            height={40}
+            className="sm:w-[50px] sm:h-[50px]"
           />
-          <Image src="/images/google.svg" alt="Google" width={50} height={50} />
-          <Image src="/images/jump.svg" alt="Jump" width={50} height={50} />
+          <Image
+            src="/images/google.svg"
+            alt="Google"
+            width={40}
+            height={40}
+            className="sm:w-[50px] sm:h-[50px]"
+          />
+          <Image
+            src="/images/jump.svg"
+            alt="Jump"
+            width={40}
+            height={40}
+            className="sm:w-[50px] sm:h-[50px]"
+          />
           <Image
             src="/images/lollapaloza.svg"
             alt="LP"
-            width={50}
-            height={50}
+            width={40}
+            height={40}
+            className="sm:w-[50px] sm:h-[50px]"
           />
           <Image
             src="/images/magiceden.svg"
             alt="Magic"
-            width={50}
-            height={50}
+            width={40}
+            height={40}
+            className="sm:w-[50px] sm:h-[50px]"
           />
         </div>
       </div>
 
-      <div className="flex items-center justify-center">
-        <Image src="/images/herobg.svg" alt="" width={1400} height={1000} />
+      {/* Background image */}
+      <div className="flex items-center justify-center -mt-10 sm:-mt-14 md:-mt-40 px-4">
+        <Image
+          src="/images/herobg.gif"
+          alt="Hero background"
+          width={1400}
+          height={1000}
+          className="w-full max-w-[1400px] h-auto"
+        />
       </div>
     </section>
   );
