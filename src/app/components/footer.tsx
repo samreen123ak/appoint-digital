@@ -1,5 +1,5 @@
 // import React from "react";
-// import Image from "next/image";
+import Image from "next/image";
 // import { FaInstagram, FaLinkedin, FaBehance } from "react-icons/fa";
 
 // const Footer: React.FC = () => {
