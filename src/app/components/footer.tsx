@@ -128,7 +128,6 @@ export default function Footer() {
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-full overflow-hidden bg-gradient-to-br from-yellow-400 to-yellow-600 p-0.5">
                <Image
           src="/logo.svg"
           alt="Logo"
@@ -136,7 +135,6 @@ export default function Footer() {
           height={300}
           className="w-28  flex-shrink-0"
         />
-              </div>
             </div>
             <p className="text-gray-400 text-sm mb-6 max-w-xs">
               Hassle-free blogging platform that developers and teams love.
@@ -320,7 +318,7 @@ export default function Footer() {
 
         {/* Bottom Section */}
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-400 text-sm">© 2024 Hashnode — LinearBytes Inc.</p>
+          <p className="text-gray-400 text-sm">© 2025 Appoint Digital.</p>
           <div className="flex gap-6">
             <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
               Privacy Policy
