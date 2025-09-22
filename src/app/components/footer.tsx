@@ -116,7 +116,7 @@ export default function Footer() {
     <footer
       className="relative text-white py-16 px-6 bg-black"
       style={{
-        backgroundImage: "url('/images/tech-background.jpeg')",
+        backgroundImage: "url('/images/herobg.gif')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -129,11 +129,13 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 rounded-full overflow-hidden bg-gradient-to-br from-yellow-400 to-yellow-600 p-0.5">
-                <img
-                  src="/images/tech-sphere.png"
-                  alt="Tech Sphere Logo"
-                  className="w-full h-full object-cover rounded-full"
-                />
+               <Image
+          src="/logo.svg"
+          alt="Logo"
+          width={300}
+          height={300}
+          className="w-28  flex-shrink-0"
+        />
               </div>
               <span className="text-xl font-bold">hashnode</span>
             </div>
