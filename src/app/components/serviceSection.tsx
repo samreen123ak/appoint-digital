@@ -169,8 +169,7 @@
 //       </div>
 //     </section>
 //   );
-// }
-"use client";
+// }"use client";
 
 import Image from "next/image";
 import PixelCard from "@/components/PixelCard";
@@ -236,21 +235,21 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section className="relative bg-black pt-60 pb-20 px-6 text-center text-white overflow-hidden">
-      {/* Left & Right Decorative Images */}
+    <section className="relative bg-black pt-8 sm:pt-28 md:pt-60 pb-20 px-4 sm:px-6 text-center text-white overflow-hidden">
+      {/* Left & Right Decorative Images (hide on small) */}
       <Image
         src="/images/apponitbgleft.svg"
         alt="Left Decoration"
         width={250}
         height={250}
-        className="absolute left-0 top-[70%] -translate-y-1/2 z-0 pointer-events-none"
+        className="hidden md:block absolute left-0 top-[70%] -translate-y-1/2 z-0 pointer-events-none"
       />
       <Image
         src="/images/appointbgright.svg"
         alt="Right Decoration"
         width={250}
         height={250}
-        className="absolute right-0 top-[30%] -translate-y-1/2 z-0 pointer-events-none"
+        className="hidden md:block absolute right-0 top-[30%] -translate-y-1/2 z-0 pointer-events-none"
       />
 
       {/* Globe Background */}
@@ -261,30 +260,30 @@ export default function ServicesSection() {
           width={1600}
           height={1600}
           priority
-          className="object-contain animate-spin-slow"
+          className="object-contain animate-spin-slow max-w-full"
         />
       </div>
 
       {/* Content */}
-      <div className="relative z-20 mt-30">
+      <div className="relative z-20 mt-20 md:mt-30">
         {/* Heading */}
-        <div className="mb-16">
-          <h3 className="text-sm uppercase tracking-widest text-primary font-bold mb-5">
+        <div className="mb-10 md:mb-16">
+          <h3 className="text-xs sm:text-sm uppercase tracking-widest text-primary font-bold mb-3 sm:mb-5">
             Leading digital marketing Firm.
           </h3>
-          <div className="flex justify-center">
+          <div className="flex justify-center px-2">
             <BlurText
               text="Appoint Digital Solutions"
               delay={150}
               animateBy="words"
               direction="top"
-              className="text-6xl font-[600px] text-white"
+              className="text-2xl sm:text-4xl md:text-6xl font-semibold text-white"
             />
           </div>
         </div>
 
         {/* Services Grid */}
-        <div className="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 max-w-6xl mx-auto">
           {services.map((service, index) => (
             <PixelCard
               key={index}
@@ -295,20 +294,22 @@ export default function ServicesSection() {
               noFocus={true}
             >
               <div className="pixel-card absolute">
-                <div className="p-8 flex flex-col items-center text-center justify-center ">
-                  <div className="mb-6">
+                <div className="p-6 sm:p-8 flex flex-col items-center text-center justify-center">
+                  <div className="mb-4 sm:mb-6">
                     <Image
                       src={service.icon}
                       alt={service.title}
-                      width={60}
-                      height={60}
-                      className="mx-auto"
+                      width={50}
+                      height={50}
+                      className="mx-auto sm:w-[60px] sm:h-[60px]"
                     />
                   </div>
-                  <h3 className="text-primary font-semibold text-xl mb-4">
+                  <h3 className="text-primary font-semibold text-lg sm:text-xl mb-2 sm:mb-4">
                     {service.title}
                   </h3>
-                  <p className="text-gray-300 text-sm">{service.desc}</p>
+                  <p className="text-gray-300 text-xs sm:text-sm">
+                    {service.desc}
+                  </p>
                 </div>
               </div>
             </PixelCard>

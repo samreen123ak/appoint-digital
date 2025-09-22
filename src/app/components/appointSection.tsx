@@ -78,20 +78,21 @@
 //     </section>
 //   );
 // }
+
 "use client";
 import Image from "next/image";
 import BlurText from "./BlurText";
 
 export default function AppointSection() {
   return (
-    <section className="relative bg-gradient-to-b from-white via-gray-50 to-white py-28 overflow-hidden">
-      {/* Decorative gradient circles */}
-      <div className="absolute -top-32 -left-32 w-72 h-72 bg-[#FFD74B]/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 -right-40 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+    <section className="relative bg-gradient-to-b from-white via-gray-50 to-white py-16 sm:py-20 md:py-28 overflow-hidden">
+      {/* Decorative gradient circles (hide on small to reduce clutter) */}
+      <div className="hidden sm:block absolute -top-32 -left-32 w-72 h-72 bg-[#FFD74B]/20 rounded-full blur-3xl" />
+      <div className="hidden sm:block absolute bottom-0 -right-40 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
 
-      <div className="container mx-auto px-6 text-center relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
         {/* Animated Title */}
-        <h2 className="text-5xl md:text-6xl leading-snug text-gray-900 mb-4 text-center flex flex-col items-center justify-center">
+        <h2 className="text-3xl sm:text-4xl md:text-6xl leading-snug text-gray-900 mb-4 flex flex-col items-center justify-center">
           <BlurText
             text="Best brands choose"
             delay={120}
@@ -109,14 +110,14 @@ export default function AppointSection() {
         </h2>
 
         {/* Subtitle */}
-        <p className="text-gray-600 mt-6 max-w-2xl mx-auto text-lg">
+        <p className="text-gray-600 mt-4 sm:mt-6 max-w-xl sm:max-w-2xl mx-auto text-base sm:text-lg">
           Trusted by global companies for innovation, design, and marketing
           success.
         </p>
 
         {/* Logos Scrolling Row */}
-        <div className="relative overflow-hidden mt-20">
-          <div className="flex animate-scroll gap-12">
+        <div className="relative overflow-hidden mt-10 sm:mt-16 md:mt-20">
+          <div className="flex animate-scroll gap-6 sm:gap-12">
             {[
               "/images/brand1.svg",
               "/images/brand2.svg",
@@ -126,13 +127,14 @@ export default function AppointSection() {
             ].map((brand, i) => (
               <div
                 key={i}
-                className="flex-shrink-0 w-40 h-24 rounded-2xl shadow-md bg-white flex items-center justify-center border border-gray-200  "
+                className="flex-shrink-0 w-28 h-16 sm:w-32 sm:h-20 md:w-40 md:h-24 rounded-2xl shadow-md bg-white flex items-center justify-center border border-gray-200"
               >
                 <Image
                   src={brand}
                   alt={`Brand ${i + 1}`}
-                  width={120}
-                  height={60}
+                  width={100}
+                  height={50}
+                  className="max-w-full h-auto"
                 />
               </div>
             ))}
@@ -147,13 +149,14 @@ export default function AppointSection() {
             ].map((brand, i) => (
               <div
                 key={i + 100}
-                className="flex-shrink-0 w-40 h-24 rounded-2xl shadow-md bg-white flex items-center justify-center border border-gray-200 "
+                className="flex-shrink-0 w-28 h-16 sm:w-32 sm:h-20 md:w-40 md:h-24 rounded-2xl shadow-md bg-white flex items-center justify-center border border-gray-200"
               >
                 <Image
                   src={brand}
                   alt={`Brand ${i + 1}`}
-                  width={120}
-                  height={60}
+                  width={100}
+                  height={50}
+                  className="max-w-full h-auto"
                 />
               </div>
             ))}

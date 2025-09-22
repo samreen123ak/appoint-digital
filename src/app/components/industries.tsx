@@ -65,7 +65,7 @@ export default function Industries() {
                   className="group relative w-64 h-16 text-left bg-black/40 backdrop-blur-sm p-3"
                 >
                   <div className="flex items-center justify-center h-full">
-                    <FaDiamond className="w-6 h-6 text-primary mr-3 flex-shrink-0" />
+                    <FaDiamond className="w-6 h-6 text-primary mr-3 " />
                     <span className="text-white text-base font-semibold leading-snug">
                       {text}
                     </span>

@@ -12,10 +12,12 @@ import ContactTabs from "@/app/components/contactTab";
 import Footer from "@/app/components/footer";
 import ProjectStart from "../../components/projectStart";
 import SuccessfulProjects from "../../components/succesfullProject";
+import Header from "@/app/components/header";
 
 export default function Accountants() {
   return (
     <section>
+      <Header />
       <AcountHero />
       <WebAgency />
       <ProjectStart />

@@ -105,32 +105,33 @@ import BlurText from "./BlurText";
 
 export default function BrandSection() {
   return (
-    <section className="relative w-full bg-black h-[120vh]">
-      <div className="absolute inset-0">
+    <section className="relative w-full h-[48vh] bg-bg sm:h-[120vh]">
+      {/* Mobile Background (yellow only) */}
+      <div className="absolute inset-0 bg-primary sm:hidden" />
+
+      {/* Background Image (only for sm and up) */}
+      <div className="hidden sm:block absolute inset-0">
         <Image
           src="/images/brandbg.svg"
           alt="Brand Background"
           fill
-          className="object-cover"
           priority
+          className="object-cover"
         />
       </div>
 
-      {/* Overlay */}
-      <div className="absolute inset-0 "></div>
-
-      <div className="relative z-10 px-7 py-16 container mx-auto ">
+      {/* Content */}
+      <div className="relative z-10 px-4 sm:px-7 py-6 sm:py-16 container mx-auto ">
         {/* Title + Subtitle */}
-        <div className="mb-16 px-10">
-          {/* 👇 Replace h2 with BlurText */}
-          <div className="mb-5">
+        <div className="mb-6 sm:mb-16 px-2 sm:px-10">
+          <div className="mb-2 sm:mb-5">
             <BlurText
               text="The best brands choose"
               delay={120}
               animateBy="words"
               direction="top"
               align="left"
-              className="text-6xl font-light text-black"
+              className="text-2xl sm:text-4xl md:text-6xl font-light text-black"
             />
             <BlurText
               text="Appoint Digital"
@@ -138,11 +139,11 @@ export default function BrandSection() {
               animateBy="words"
               direction="top"
               align="left"
-              className="text-6xl font-bold text-black"
+              className="text-3xl sm:text-5xl md:text-6xl font-bold text-black"
             />
           </div>
 
-          <p className="text-lg text-black text-start mt-3 max-w-3xl mb-15">
+          <p className="text-xs sm:text-base md:text-lg text-black text-start mt-1 sm:mt-3 max-w-xs sm:max-w-xl md:max-w-3xl">
             As a trusted Digital Marketing Agency Company, Bird has been
             featured in top-tier media and industry-leading platforms,
             showcasing our expertise in delivering exceptional digital marketing
@@ -151,8 +152,8 @@ export default function BrandSection() {
         </div>
 
         {/* Brand Logos Row */}
-        <div className="relative w-full overflow-hidden my-20">
-          <div className="flex animate-scroll gap-8">
+        <div className="relative w-full overflow-hidden my-6 sm:my-20">
+          <div className="flex animate-scroll gap-3 sm:gap-8">
             {[
               "/images/brand1.svg",
               "/images/brand2.svg",
@@ -162,28 +163,16 @@ export default function BrandSection() {
             ].map((brand, i) => (
               <div
                 key={i}
-                className="flex items-center justify-center h-28 w-52 rounded-full border border-gray-400/50 bg-primary"
+                className="flex items-center justify-center h-14 w-28 sm:h-20 sm:w-44 md:h-28 md:w-52 rounded-full border border-gray-400/50 bg-primary"
               >
                 <Image
                   src={brand}
                   alt={`Brand ${i + 1}`}
-                  width={100}
-                  height={60}
+                  width={70}
+                  height={40}
+                  className="w-14 sm:w-20 md:w-24"
                 />
               </div>
-
-              //       <div
-              //         key={i}
-              //         className={`flex items-center justify-center h-28 w-52 rounded-full border border-gray-400/50
-              // ${i === 1 || i === 3 || i === 5 ? "bg-primary" : "bg-black"}`}
-              //       >
-              //         <Image
-              //           src={brand}
-              //           alt={`Brand ${i + 1}`}
-              //           width={100}
-              //           height={60}
-              //         />
-              //       </div>
             ))}
 
             {/* Duplicate row for seamless loop */}
@@ -196,36 +185,24 @@ export default function BrandSection() {
             ].map((brand, i) => (
               <div
                 key={i}
-                className="flex items-center justify-center h-28 w-52 rounded-full border border-gray-400/50 bg-primary"
+                className="flex items-center justify-center h-14 w-28 sm:h-20 sm:w-44 md:h-28 md:w-52 rounded-full border border-gray-400/50 bg-primary"
               >
                 <Image
                   src={brand}
                   alt={`Brand ${i + 1}`}
-                  width={100}
-                  height={60}
+                  width={70}
+                  height={40}
+                  className="w-14 sm:w-20 md:w-24"
                 />
               </div>
-
-              //       <div
-              //         key={i}
-              //         className={`flex items-center justify-center h-28 w-52 rounded-full border border-gray-400/50
-              // ${i === 1 || i === 3 || i === 5 ? "bg-primary" : "bg-black"}`}
-              //       >
-              //         <Image
-              //           src={brand}
-              //           alt={`Brand ${i + 1}`}
-              //           width={100}
-              //           height={60}
-              //         />
-              //       </div>
             ))}
           </div>
         </div>
       </div>
 
-      {/* Globe Image */}
-      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 z-20">
-        <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-[500px] md:h-[500px] lg:w-[700px] lg:h-[700px]">
+      {/* Globe Image (hidden on mobile) */}
+      <div className="hidden sm:block absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 z-20">
+        <div className="relative w-40 h-40 sm:w-64 sm:h-64 md:w-[500px] md:h-[500px] lg:w-[700px] lg:h-[700px]">
           <Image
             src="/images/globeYellowbg.svg"
             alt="Global Reach"

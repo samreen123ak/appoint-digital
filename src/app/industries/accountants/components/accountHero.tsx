@@ -8,12 +8,6 @@ export default function AcountHero() {
   return (
     <section className="relative bg-bg text-white min-h-screen flex flex-col overflow-hidden">
       {/* Background Image (right side only) */}
-      <header className="flex items-center justify-between px-8 py-10 relative z-10">
-        <div className="flex justify-between items-center w-full">
-          <Image src="/logo.svg" alt="Logo" width={70} height={70} />
-        </div>
-        <IoMdMenu className="text-primary h-7 w-7 cursor-poiter " />
-      </header>
 
       {/* Navbar / Logo */}
 
@@ -21,7 +15,7 @@ export default function AcountHero() {
       <div className="flex flex-1 px-4 relative z-10">
         {/* Left Section */}
         <div className="flex flex-col items-start justify-center text-start px-10">
-          <p className="text-2xl mb-6">Top Rated and Award Winning</p>
+          <p className="text-2xl mb-6 mt-5">Top Rated and Award Winning</p>
           <h1>
             <BlurText
               text="Accountant Digital"

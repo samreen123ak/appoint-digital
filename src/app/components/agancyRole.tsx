@@ -59,10 +59,66 @@ import { motion } from "framer-motion";
 
 export default function AgencyRole() {
   return (
-    <section className="relative bg-black text-white py-32 overflow-hidden">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        {/* LEFT SIDE - Globe with Animation */}
-        {/* <motion.div
+    <section className="relative bg-black text-white py-20 sm:py-28 md:py-32 overflow-hidden">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center px-6 md:px-20">
+        {/* LEFT SIDE - Globe */}
+        <motion.div
+          className="relative flex justify-start hidden md:block"
+          initial={{ x: -200, scale: 0.8, opacity: 0 }}
+          whileInView={{ x: 0, scale: 1.2, opacity: 1 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+        >
+          <Image
+            src="/images/halfGlobeleft.svg"
+            alt="Globe"
+            width={900}
+            height={900}
+            className="object-cover w-[250px] sm:w-[400px] md:w-[900px] h-auto"
+          />
+        </motion.div>
+
+        {/* RIGHT SIDE (Text Section) */}
+        <div className="space-y-6 pr-0 sm:pr-6 md:pr-20 text-left">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-snug text-primary">
+            A Leading Global Full Service <br /> Digital Marketing Agency
+          </h2>
+
+          <p className="text-gray-300 text-sm sm:text-md md:text-md leading-relaxed max-w-full sm:max-w-xl md:max-w-2xl">
+            Bird is a premier Digital Marketing Agency with a global presence,
+            known for delivering top-tier digital solutions to businesses
+            worldwide. Our dynamic agency stands out for its ability to enhance
+            digital visibility for businesses, using the latest technologies and
+            innovative approaches.
+          </p>
+
+          <h3 className="text-xl sm:text-2xl md:text-4xl font-semibold text-primary">
+            Enhancing Your Digital Presence
+          </h3>
+
+          <p className="text-gray-300 text-sm sm:text-md md:text-md leading-relaxed max-w-full sm:max-w-xl md:max-w-2xl">
+            In the rapidly changing digital environment, having a strong digital
+            presence is crucial. Companies around the world recognize the
+            importance of this digital domain, and Birds digital marketing
+            services are at the forefront of this digital revolution. We
+            specialize in boosting the digital profiles of businesses, ensuring
+            their success in the online marketplace.
+          </p>
+
+          <button className="bg-primary text-black px-5 sm:px-6 py-2 sm:py-3 rounded font-semibold cursor-pointer text-sm sm:text-base transition">
+            Contact Us
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+{
+  /* LEFT SIDE - Globe with Animation */
+}
+{
+  /* <motion.div
           className="relative flex justify-start"
           initial={{ x: -200, scale: 0.8, opacity: 0 }} // start hidden, left, small
           whileInView={{ x: 0, scale: 1.2, opacity: 1 }} // animate to center + bigger
@@ -76,55 +132,5 @@ export default function AgencyRole() {
             height={500}
             className="object-contain"
           />
-        </motion.div> */}
-        <motion.div
-          className="relative flex justify-start"
-          initial={{ x: -200, scale: 0.8, opacity: 0 }} // start hidden, left, small
-          whileInView={{ x: 0, scale: 1.2, opacity: 1 }} // animate to center + bigger
-          viewport={{ once: false, amount: 0.3 }} // trigger every time it comes into view
-          transition={{ duration: 1.2, ease: "easeOut" }} // smooth animation
-        >
-          <Image
-            src="/images/halfGlobeleft.svg"
-            alt="Globe"
-            width={900}
-            height={900}
-            className="object-cover"
-          />
-        </motion.div>
-
-        {/* RIGHT SIDE (Text Section) */}
-        <div className="space-y-6 pr-20">
-          <h2 className="text-4xl font-bold leading-snug text-primary">
-            A Leading Global Full Service <br /> Digital Marketing Agency
-          </h2>
-
-          <p className="text-gray-300 text-md leading-relaxed max-w-2xl">
-            Bird is a premier Digital Marketing Agency with a global presence,
-            known for delivering top-tier digital solutions to businesses
-            worldwide. Our dynamic agency stands out for its ability to enhance
-            digital visibility for businesses, using the latest technologies and
-            innovative approaches.
-          </p>
-
-          <h3 className="text-4xl font-semibold text-primary">
-            Enhancing Your Digital Presence
-          </h3>
-
-          <p className="text-gray-300 text-md leading-relaxed max-w-2xl">
-            In the rapidly changing digital environment, having a strong digital
-            presence is crucial. Companies around the world recognize the
-            importance of this digital domain, and Birds digital marketing
-            services are at the forefront of this digital revolution. We
-            specialize in boosting the digital profiles of businesses, ensuring
-            their success in the online marketplace.
-          </p>
-
-          <button className="bg-primary text-black px-6 py-3 rounded font-semibold cursor-pointer transition">
-            Contact Us
-          </button>
-        </div>
-      </div>
-    </section>
-  );
+        </motion.div> */
 }

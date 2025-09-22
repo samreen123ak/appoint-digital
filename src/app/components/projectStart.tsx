@@ -4,17 +4,17 @@ import BlurText from "./BlurText";
 
 export default function StartProject() {
   return (
-    <div className="h-[400px] flex items-start justify-start px-16 py-20 bg-black text-white">
+    <div className="h-[400px] sm:h-auto flex items-start justify-start px-6 sm:px-16 py-12 sm:py-20 bg-black text-white">
       <div className="max-w-3xl">
         {/* Heading */}
-        <h1 className=" flex ">
+        <h1 className="flex flex-row sm:items-baseline">
           <BlurText
             text="Start a"
             delay={120}
             animateBy="words"
             direction="top"
             align="left"
-            className="text-6xl font-[600px] mb-6 -mr-40"
+            className="text-3xl sm:text-6xl font-[600px] mb-4 sm:mb-6 -mr-36 sm:-mr-40"
           />
           <BlurText
             text="project"
@@ -22,17 +22,14 @@ export default function StartProject() {
             animateBy="words"
             direction="top"
             align="left"
-            className="text-6xl font-[600px] text-primary mb-6"
+            className="text-3xl sm:text-6xl font-[600px]  text-primary"
           />
         </h1>
-        {/* <h1 className="text-6xl font-[600px] mb-6">
-          Start a <span className="text-primary">project</span>
-        </h1> */}
 
         {/* Subtitle */}
-        <p className="text-lg leading-relaxed max-w-lg">
+        <p className="text-base sm:text-lg leading-relaxed max-w-full sm:max-w-lg mt-4">
           Do you have a digital marketing objective{" "}
-          <span className="relative inline-block  group cursor-pointer">
+          <span className="relative inline-block group cursor-pointer">
             you&apos;d like to achieve?
             <span className="absolute right-0 bottom-0 h-[2px] w-full bg-white origin-right scale-x-100 transition-transform duration-500 group-hover:scale-x-0 "></span>
           </span>{" "}

@@ -31,9 +31,9 @@ export default function SuccessfulProjects() {
   const [hoverRight, setHoverRight] = useState(false);
 
   return (
-    <div className="min-h-screen w-full bg-white text-black flex relative">
+    <div className="min-h-screen w-full bg-white text-black flex flex-col lg:flex-row relative">
       {/* LEFT SIDE (Sticky Info) */}
-      <div className="w-1/2 px-16 py-28 sticky top-0 self-start">
+      <div className="lg:w-1/2 w-full px-6 sm:px-16 py-12 lg:py-28 sticky lg:top-0 self-start">
         {/* Our Work */}
         <div className="relative inline-block mb-4">
           <span className="text-lg font-medium relative z-10">Our Work</span>
@@ -41,8 +41,7 @@ export default function SuccessfulProjects() {
         </div>
 
         {/* Heading */}
-
-        <h2 className="text-6xl font-[600px] text-black  mb-10  ">
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-[600px] text-black mb-10">
           <BlurText
             text="Case Studies, a selection of"
             delay={100}
@@ -57,12 +56,12 @@ export default function SuccessfulProjects() {
             animateBy="words"
             direction="top"
             align="left"
-            className="block text-primary text-6xl "
+            className="block text-primary"
           />
         </h2>
 
         {/* Subtitle */}
-        <p className="text-sm text-gray-600 mb-6">
+        <p className="text-sm sm:text-base text-gray-600 mb-6">
           We always put our clients first to deliver our best time after time.
           Below is some of our proudest work.
         </p>
@@ -76,7 +75,7 @@ export default function SuccessfulProjects() {
 
       {/* RIGHT SIDE (Scrollable Projects) */}
       <div
-        className="w-1/2 px-10 py-20 space-y-10 relative"
+        className="lg:w-1/2 w-full px-6 sm:px-10 py-10 lg:py-20 space-y-10 relative"
         onMouseMove={(e) => setCursorPos({ x: e.clientX, y: e.clientY })}
         onMouseEnter={() => setHoverRight(true)}
         onMouseLeave={() => setHoverRight(false)}
@@ -89,24 +88,24 @@ export default function SuccessfulProjects() {
               alt={project.title}
               width={600}
               height={400}
-              className="rounded-lg shadow-md"
+              className="rounded-lg shadow-md w-full h-auto"
             />
 
             {/* Project Title */}
-            <h3 className="text-xl font-light">{project.title}</h3>
+            <h3 className="text-xl sm:text-lg font-light">{project.title}</h3>
 
             {/* Company Name with hover line */}
-            <span className="relative inline-block font-bold group cursor-pointer text-lg ">
+            <span className="relative inline-block font-bold group cursor-pointer text-lg sm:text-base">
               {project.company}
               <span className="absolute left-0 bottom-0 h-[2px] w-full bg-black origin-left scale-x-0 transition-transform duration-500 group-hover:scale-x-100"></span>
             </span>
           </div>
         ))}
 
-        {/* Hover Cursor (Circle with "view") */}
+        {/* Hover Cursor (Circle with "view") - hidden on small screens */}
         {hoverRight && (
           <div
-            className="fixed z-50 pointer-events-none flex items-center justify-center w-24 h-24 font-bold rounded-full bg-gray-400/80 text-black text-sm uppercase cursor-pointer"
+            className="hidden lg:flex fixed z-50 pointer-events-none items-center justify-center w-24 h-24 font-bold rounded-full bg-gray-400/80 text-black text-sm uppercase"
             style={{
               left: cursorPos.x - 48,
               top: cursorPos.y - 48,
