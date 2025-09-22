@@ -137,7 +137,6 @@ export default function Footer() {
           className="w-28  flex-shrink-0"
         />
               </div>
-              <span className="text-xl font-bold">hashnode</span>
             </div>
             <p className="text-gray-400 text-sm mb-6 max-w-xs">
               Hassle-free blogging platform that developers and teams love.
