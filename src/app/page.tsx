@@ -15,6 +15,8 @@ import ThriveSection from "./components/thriveSection";
 import AOSWrapper from "./components/aosProvider";
 import ProjectStart from "./components/projectStart";
 import SuccessfulProjects from "./components/succesfullProject";
+import FooterNew from "./components/footerNew";
+import BrandPortion from "./components/brandportion";
 
 export default function Home() {
   return (
@@ -22,7 +24,7 @@ export default function Home() {
       <section>
         <Header />
         <Hero />
-        <BrandSection />
+        <BrandPortion />
         <ServicesSection />
         <AppointSection />
         <Industries />
@@ -32,7 +34,7 @@ export default function Home() {
         <AgencyRole />
         <ArticlesSection />
         <ContactTabs />
-        <Footer />
+        <FooterNew />
       </section>
     </AOSWrapper>
   );

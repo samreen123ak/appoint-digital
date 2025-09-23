@@ -6,24 +6,24 @@ import BlurText from "./BlurText";
 
 export default function Industries() {
   return (
-    <section className="relative min-h-screen bg-bg flex items-center justify-center py-20 overflow-hidden">
+    <section className="relative min-h-screen bg-bg flex items-center justify-center py-40 overflow-hidden">
       {/* Background overlay */}
       <div className="absolute inset-0" />
 
       {/* Background images */}
       <Image
-        src="/images/industrybgleft.svg"
+        src="/images/decoration.svg"
         alt="Decoration Left"
-        width={300}
+        width={400}
         height={300}
-        className="absolute top-[15%] left-0 opacity-60 pointer-events-none select-none"
+        className="absolute rotate-180 top-[14%] -left-20 opacity-60 pointer-events-none select-none"
       />
       <Image
-        src="/images/industrybgright.svg"
+        src="/images/decoration.svg"
         alt="Decoration Right"
-        width={300}
+        width={400}
         height={300}
-        className="absolute top-[15%] right-0 opacity-60 pointer-events-none select-none"
+        className="absolute rotate-x-180 top-[14%] -right-20 opacity-60 pointer-events-none select-none"
       />
 
       {/* Content */}

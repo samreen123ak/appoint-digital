@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import BlurText from "./BlurText";
+import { motion } from "framer-motion";
 
 export default function ContactTabs() {
   const [active, setActive] = useState<"contact" | "call">("contact");
@@ -24,8 +25,49 @@ export default function ContactTabs() {
       <div className="sm:hidden absolute inset-0 bg-primary"></div>
 
       <div className="relative z-10 flex items-center justify-center sm:h-screen h-auto w-full px-4 sm:px-6 py-16 sm:py-0">
-        <div className="text-center mt-8 mx-auto max-w-full sm:max-w-4xl">
-          <h2 className="text-3xl sm:text-6xl font-[600] text-black mb-4 sm:mb-8 flex flex-col items-center justify-center leading-snug sm:leading-tight">
+        {/* LEFT SIDE - Globe */}
+        <motion.div
+          className="absolute -left-12 top-1/2 -translate-y-1/2 hidden md:block"
+          initial={{ x: -200, scale: 0.9, opacity: 0 }}
+          whileInView={{ x: 0, scale: 1, opacity: 1 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{
+            duration: 1.5,
+            ease: [0.25, 0.1, 0.25, 1], // custom cubic-bezier for smoothness
+          }}
+        >
+          <Image
+            src="/images/halfGlobeleft.svg"
+            alt="Globe Left"
+            width={400}
+            height={400}
+            className="object-contain w-[100px] sm:w-[200px] md:w-[400px] h-auto"
+          />
+        </motion.div>
+
+        {/* RIGHT SIDE - Globe */}
+        <motion.div
+          className="absolute -right-12 top-[54%] -translate-y-1/2 hidden md:block"
+          initial={{ x: 200, scale: 0.9, opacity: 0 }}
+          whileInView={{ x: 0, scale: 1, opacity: 1 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{
+            duration: 1.5,
+            ease: [0.25, 0.1, 0.25, 1],
+          }}
+        >
+          <Image
+            src="/images/halfGlobeleft.svg"
+            alt="Globe Right"
+            width={500}
+            height={500}
+            className="object-contain rotate-180 w-[100px] sm:w-[200px] md:w-[400px] h-auto"
+          />
+        </motion.div>
+
+        {/* CENTER CONTENT */}
+        <div className="text-center mx-auto max-w-full sm:max-w-4xl relative z-10">
+          <h2 className="text-3xl sm:text-6xl font-[600] text-black mb-4 sm:mb-8 leading-snug sm:leading-tight">
             <BlurText
               text="Take Your Digital"
               delay={100}
@@ -42,17 +84,17 @@ export default function ContactTabs() {
             />
             <BlurText
               text="Level with Us!"
-              delay={150}
+              delay={200}
               animateBy="words"
               direction="top"
               className="block"
             />
           </h2>
 
-          <p className="text-sm sm:text-lg md:text-xl text-black mb-6 sm:mb-12 max-w-full sm:max-w-4xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-lg md:text-xl text-black mb-6 sm:mb-12 max-w-3xl sm:max-w-2xl mx-auto leading-relaxed">
             Partner with our web agency to turn data into growth, insights into
-            impact, and strategies into success. Lets make every digital move
-            count
+            impact, and strategies into success. Let’s make every digital move
+            count.
           </p>
 
           {/* Tab Buttons */}

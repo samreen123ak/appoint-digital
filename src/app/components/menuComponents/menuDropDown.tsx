@@ -50,13 +50,17 @@ const Dropdown: React.FC<DropdownProps> = ({
 
         <div className="grid grid-cols-3 gap-8  relative z-10">
           <div className="flex flex-col gap-6">
-            <div className="flex items-center gap-3 cursor-pointer hover:text-primary text-3xl font-bold">
+            <div
+              className="flex items-center gap-3 cursor-pointer text-3xl font-bold 
+             hover:text-primary transform transition-transform duration-300 hover:translate-x-4"
+            >
               <Image src="/images/home.svg" alt="Home" width={30} height={30} />
               <span>Home</span>
             </div>
 
             <div
-              className="flex items-center gap-3 cursor-pointer hover:text-primary text-3xl font-bold"
+              className="flex items-center gap-3 cursor-pointer text-3xl font-bold 
+             hover:text-primary transform transition-transform duration-300 hover:translate-x-4"
               onClick={onServicesClick}
             >
               <Image
@@ -69,7 +73,8 @@ const Dropdown: React.FC<DropdownProps> = ({
             </div>
 
             <div
-              className="flex items-center gap-3 cursor-pointer hover:text-primary text-3xl font-bold"
+              className="flex items-center gap-3 cursor-pointer text-3xl font-bold 
+             hover:text-primary transform transition-transform duration-300 hover:translate-x-4"
               onClick={onResourcesClick}
             >
               <Image
@@ -82,7 +87,8 @@ const Dropdown: React.FC<DropdownProps> = ({
             </div>
 
             <div
-              className="flex items-center gap-3 cursor-pointer hover:text-primary text-3xl font-bold"
+              className="flex items-center gap-3 cursor-pointer text-3xl font-bold 
+             hover:text-primary transform transition-transform duration-300 hover:translate-x-4"
               onClick={onIndustriesClick}
             >
               <Image
@@ -96,7 +102,10 @@ const Dropdown: React.FC<DropdownProps> = ({
           </div>
 
           <div className="flex flex-col gap-6">
-            <div className="flex items-center gap-3 cursor-pointer hover:text-primary text-3xl font-bold">
+            <div
+              className="flex items-center gap-3 cursor-pointer text-3xl font-bold 
+             hover:text-primary transform transition-transform duration-300 hover:translate-x-4"
+            >
               <Image
                 src="/images/contact.svg"
                 alt="Contact"
@@ -106,7 +115,10 @@ const Dropdown: React.FC<DropdownProps> = ({
               <span>Contact</span>
             </div>
 
-            <div className="flex items-center gap-3 cursor-pointer hover:text-primary text-3xl font-bold">
+            <div
+              className="flex items-center gap-3 cursor-pointer text-3xl font-bold 
+             hover:text-primary transform transition-transform duration-300 hover:translate-x-4"
+            >
               <Image
                 src="/images/logout.svg"
                 alt="Logout"
@@ -117,7 +129,8 @@ const Dropdown: React.FC<DropdownProps> = ({
             </div>
 
             <div
-              className="flex items-center gap-3 cursor-pointer hover:text-primary text-3xl font-bold"
+              className="flex items-center gap-3 cursor-pointer text-3xl font-bold 
+             hover:text-primary transform transition-transform duration-300 hover:translate-x-4"
               onClick={onWhowereClick}
             >
               <Image
@@ -129,7 +142,7 @@ const Dropdown: React.FC<DropdownProps> = ({
               <span>Who We Are</span>
             </div>
 
-            <button className="bg-primary text-black font-semibold px-5 py-3 w-52 text-xl rounded-md cursor-pointer">
+            <button className="bg-primary text-black font-semibold px-5 py-3 w-52 text-xl rounded-md cursor-pointer transform transition-transform duration-300 hover:translate-x-4">
               Free audit
             </button>
           </div>

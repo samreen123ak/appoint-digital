@@ -78,20 +78,27 @@
 //     </section>
 //   );
 // }
-
 "use client";
 import Image from "next/image";
 import BlurText from "./BlurText";
 
+const brands = [
+  "/images/brand1.svg",
+  "/images/brand2.svg",
+  "/images/brand3.svg",
+  "/images/brand4.svg",
+  "/images/brand5.svg",
+];
+
 export default function AppointSection() {
   return (
     <section className="relative bg-gradient-to-b from-white via-gray-50 to-white py-16 sm:py-20 md:py-28 overflow-hidden">
-      {/* Decorative gradient circles (hide on small to reduce clutter) */}
+      {/* Decorative gradient circles */}
       <div className="hidden sm:block absolute -top-32 -left-32 w-72 h-72 bg-[#FFD74B]/20 rounded-full blur-3xl" />
       <div className="hidden sm:block absolute bottom-0 -right-40 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
-        {/* Animated Title */}
+        {/* Title */}
         <h2 className="text-3xl sm:text-4xl md:text-6xl leading-snug text-gray-900 mb-4 flex flex-col items-center justify-center">
           <BlurText
             text="Best brands choose"
@@ -115,52 +122,24 @@ export default function AppointSection() {
           success.
         </p>
 
-        {/* Logos Scrolling Row */}
-        <div className="relative overflow-hidden mt-10 sm:mt-16 md:mt-20">
-          <div className="flex animate-scroll gap-6 sm:gap-12">
-            {[
-              "/images/brand1.svg",
-              "/images/brand2.svg",
-              "/images/brand3.svg",
-              "/images/brand4.svg",
-              "/images/brand5.svg",
-            ].map((brand, i) => (
-              <div
-                key={i}
-                className="flex-shrink-0 w-28 h-16 sm:w-32 sm:h-20 md:w-40 md:h-24 rounded-2xl shadow-md bg-white flex items-center justify-center border border-gray-200"
-              >
-                <Image
-                  src={brand}
-                  alt={`Brand ${i + 1}`}
-                  width={100}
-                  height={50}
-                  className="max-w-full h-auto"
-                />
-              </div>
-            ))}
-
-            {/* Duplicate for infinite scroll */}
-            {[
-              "/images/brand1.svg",
-              "/images/brand2.svg",
-              "/images/brand3.svg",
-              "/images/brand4.svg",
-              "/images/brand5.svg",
-            ].map((brand, i) => (
-              <div
-                key={i + 100}
-                className="flex-shrink-0 w-28 h-16 sm:w-32 sm:h-20 md:w-40 md:h-24 rounded-2xl shadow-md bg-white flex items-center justify-center border border-gray-200"
-              >
-                <Image
-                  src={brand}
-                  alt={`Brand ${i + 1}`}
-                  width={100}
-                  height={50}
-                  className="max-w-full h-auto"
-                />
-              </div>
-            ))}
-          </div>
+        {/* Logos in grid */}
+        <div className="mt-10 sm:mt-16 md:mt-20 flex flex-wrap justify-center gap-x-8 gap-y-8 px-40">
+          {brands.map((brand, i) => (
+            <div
+              key={i}
+              className="w-44 h-28 sm:w-52 sm:h-32 md:w-60 md:h-36 
+      rounded-2xl  flex items-center justify-center 
+      bg-transparent "
+            >
+              <Image
+                src={brand}
+                alt={`Brand ${i + 1}`}
+                width={180}
+                height={90}
+                className="max-w-full h-auto"
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>
