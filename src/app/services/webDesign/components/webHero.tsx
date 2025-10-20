@@ -69,78 +69,78 @@ export default function WebHero() {
               <Image
                 src="/images/bravo.svg"
                 alt="Bravo"
-                width={50}
-                height={50}
+                width={80}
+                height={80}
               />
               <Image
                 src="/images/circle.svg"
                 alt="Circle"
-                width={50}
-                height={50}
+                width={80}
+                height={80}
               />
               <Image
                 src="/images/discord.svg"
                 alt="Discord"
-                width={50}
-                height={50}
+                width={80}
+                height={80}
               />
               <Image
                 src="/images/google.svg"
                 alt="Google"
-                width={50}
-                height={50}
+                width={80}
+                height={80}
               />
-              <Image src="/images/jump.svg" alt="Jump" width={50} height={50} />
+              <Image src="/images/jump.svg" alt="Jump" width={80} height={80} />
               <Image
                 src="/images/lollapaloza.svg"
                 alt="LP"
-                width={50}
-                height={50}
+                width={80}
+                height={80}
               />
               <Image
                 src="/images/magiceden.svg"
                 alt="Magic"
-                width={50}
-                height={50}
+                width={80}
+                height={80}
               />
 
               {/* Repeat images for seamless loop */}
               <Image
                 src="/images/bravo.svg"
                 alt="Bravo"
-                width={50}
-                height={50}
+                width={80}
+                height={80}
               />
               <Image
                 src="/images/circle.svg"
                 alt="Circle"
-                width={50}
-                height={50}
+                width={80}
+                height={80}
               />
               <Image
                 src="/images/discord.svg"
                 alt="Discord"
-                width={50}
-                height={50}
+                width={80}
+                height={80}
               />
               <Image
                 src="/images/google.svg"
                 alt="Google"
-                width={50}
-                height={50}
+                width={80}
+                height={80}
               />
-              <Image src="/images/jump.svg" alt="Jump" width={50} height={50} />
+              <Image src="/images/jump.svg" alt="Jump" width={80} height={80} />
               <Image
                 src="/images/lollapaloza.svg"
                 alt="LP"
-                width={50}
-                height={50}
+                width={80}
+                height={80}
               />
               <Image
                 src="/images/magiceden.svg"
                 alt="Magic"
-                width={50}
-                height={50}
+                width={80}
+                height={80}
               />
             </div>
           </div>

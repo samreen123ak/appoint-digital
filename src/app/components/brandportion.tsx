@@ -12,7 +12,7 @@ const logos = [
 
 export default function BrandPortion() {
   return (
-    <section className="w-full h-[300px] overflow-hidden bg-black">
+    <section className="w-full h-[200px] overflow-hidden bg-black">
       {/* Yellow bar */}
       <div className="w-full h-10 bg-yellow-400"></div>
 

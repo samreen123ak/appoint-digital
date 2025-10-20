@@ -1,13 +1,14 @@
 "use client";
 import React from "react";
 import BlurText from "./BlurText";
+import { useRouter } from "next/navigation";
 
 export default function ArticlesSection() {
   const articles = [
     {
       id: 1,
       date: "May 7, 2025",
-      title: "Warning: Rise in ‘Task Scams’ Targeting Job Seekers",
+      title: "Warning: Rise in Task Scams Targeting Job Seekers",
     },
     {
       id: 2,
@@ -25,6 +26,7 @@ export default function ArticlesSection() {
       title: "AI for Visual Content Creation",
     },
   ];
+  const router = useRouter();
 
   return (
     <section className="bg-black text-white py-20">
@@ -73,6 +75,7 @@ export default function ArticlesSection() {
           {articles.map((article, index) => (
             <div
               key={article.id}
+              onClick={() => router.push("/blogDetail")}
               className="relative group cursor-pointer flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8"
             >
               {/* Divider line (hidden on small screens) */}

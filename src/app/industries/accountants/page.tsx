@@ -13,6 +13,7 @@ import Footer from "@/app/components/footer";
 import ProjectStart from "../../components/projectStart";
 import SuccessfulProjects from "../../components/succesfullProject";
 import Header from "@/app/components/header";
+import FooterNew from "@/app/components/footerNew";
 
 export default function Accountants() {
   return (
@@ -30,7 +31,7 @@ export default function Accountants() {
       <DesignTools />
       <WebFAQSection />
       <ContactTabs />
-      <Footer />
+      <FooterNew />
     </section>
   );
 }

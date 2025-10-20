@@ -15,6 +15,7 @@ import WebFAQSection from "./components/webFAQs";
 import Header from "@/app/components/header";
 import ProjectStart from "../../components/projectStart";
 import SuccessfulProjects from "../../components/succesfullProject";
+import FooterNew from "@/app/components/footerNew";
 
 export default function WebDesign() {
   return (
@@ -34,7 +35,7 @@ export default function WebDesign() {
       <CustomWebsite />
       <WebFAQSection />
       <ContactTabs />
-      <Footer />
+      <FooterNew />
     </section>
   );
 }

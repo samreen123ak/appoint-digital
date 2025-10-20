@@ -235,21 +235,21 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section className="relative bg-black pt-8 sm:pt-28 md:pt-60 pb-20 px-4 sm:px-6 text-center text-white overflow-hidden">
+    <section className="relative bg-black   pb-20 px-4 sm:px-6 text-center text-white overflow-hidden">
       {/* Left & Right Decorative Images (hide on small) */}
       <Image
         src="/images/decoration.svg"
         alt="Left Decoration"
         width={350}
         height={250}
-        className="hidden md:block absolute -left-20 rotate-180 top-[85%] -translate-y-1/2 z-0 pointer-events-none"
+        className="hidden md:block absolute -left-20 rotate-180 top-[80%] -translate-y-1/2 z-0 pointer-events-none"
       />
       <Image
         src="/images/decoration.svg"
         alt="Right Decoration"
         width={350}
         height={250}
-        className="hidden md:block absolute rotate-x-180 -right-10 top-[28%]  -translate-y-1/2 z-0 pointer-events-none"
+        className="hidden md:block absolute rotate-x-180 -right-10 top-[17%]  -translate-y-1/2 z-0 pointer-events-none"
       />
 
       {/* Globe Background */}

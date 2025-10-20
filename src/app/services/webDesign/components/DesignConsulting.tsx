@@ -36,6 +36,30 @@ export default function DesignConsulting() {
           <p className="text-gray-300  text-sm leading-relaxed max-w-2xl">
             <span className="text-md text-white font-semibold">
               {" "}
+              User Experience Focus:
+            </span>{" "}
+            Our designs prioritize user experience, ensuring intuitive,
+            accessible, and engaging websites.
+          </p>
+          <p className="text-gray-300  text-sm leading-relaxed max-w-2xl">
+            <span className="text-md text-white font-semibold">
+              {" "}
+              User Experience Focus:
+            </span>{" "}
+            Our designs prioritize user experience, ensuring intuitive,
+            accessible, and engaging websites.
+          </p>
+          <p className="text-gray-300  text-sm leading-relaxed max-w-2xl">
+            <span className="text-md text-white font-semibold">
+              {" "}
+              User Experience Focus:
+            </span>{" "}
+            Our designs prioritize user experience, ensuring intuitive,
+            accessible, and engaging websites.
+          </p>
+          <p className="text-gray-300  text-sm leading-relaxed max-w-2xl">
+            <span className="text-md text-white font-semibold">
+              {" "}
               Innovative Design:
             </span>{" "}
             We employ the latest trends and technologies for standout,

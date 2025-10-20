@@ -29,21 +29,21 @@ export default function WebAgency() {
   ];
 
   return (
-    <section className="relative bg-black pt-10 pb-30 px-6 text-center text-white overflow-hidden ">
+    <section className="relative bg-black pt-10 pb-52 px-6 text-center text-white overflow-hidden ">
       {/* Left & Right Decorative Images (Bottom Layer) */}
       <Image
-        src="/images/apponitbgleft.svg"
-        alt="Left Decoration"
-        width={250}
-        height={250}
-        className="absolute left-0 top-[85%] -translate-y-1/2 z-0 pointer-events-none"
+        src="/images/decoration.svg"
+        alt="Decoration Left"
+        width={400}
+        height={300}
+        className="absolute rotate-180 top-[80%] -left-20 opacity-60 pointer-events-none select-none"
       />
       <Image
-        src="/images/appointbgright.svg"
-        alt="Right Decoration"
-        width={250}
-        height={250}
-        className="absolute right-0 top-1/4 -translate-y-1/2 z-0 pointer-events-none"
+        src="/images/decoration.svg"
+        alt="Decoration Right"
+        width={400}
+        height={300}
+        className="absolute rotate-x-180 top-[14%] -right-20 opacity-60 pointer-events-none select-none"
       />
 
       {/* Globe Background (Middle Layer) */}
